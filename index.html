@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mobile.css">
+    <script src="./js/menu-mobile.js" defer></script>
+    <script src="./js/container-cards.js" defer></script>
+    <script src="./js/cards.js" defer></script>
+    <title>Portfolio | Diego Castro</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="logo">
+                <a href="./index.html">
+                    <h1>Portfo<span>lio</span></h1>
+                </a>
+            </div>
+
+            <div class="menu">
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contate-me">Contato</a>
+                </nav>
+            </div>
+
+            <button onclick="animarMenu()" id="btn-menu">
+                <i id="open-menu" class='bx bx-menu'></i>
+            </button>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contate-me">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-principal" id="home">
+        <div class="meu-nome">
+            <p>Olá &#128075 eu sou,</p>
+            <h1>Diego Castro</h1>
+            <h3>Desenvolvedor Front-End</h3>
+            <p>Para conhecer um pouco mais sobre mim e meus projetos desenvolvidos, confira meu portfolio.</p>
+        </div>
+        <div class="background-avatar">
+            <img src="./assets/background-avatar.png" alt="Avatar do Diego">
+        </div>
+    </main>
+
+    <section class="container-sobre" id="sobre">
+        <div class="avatar-sobre">
+            <img src="./assets/avatar-diego.png" alt="Avatar do Diego">
+        </div>
+        <div class="sobre-mim">
+            <h2>Sobre mim</h2>
+            <p>
+                Olá, sou <strong>Diego Castro</strong>, nesse momento me encontro em transição de carreira da área de infraestrutura para a área de Desenvolvimento Web.
+
+                <br><br>Tenho experiência em desenvolvimento web com as principais tecnologias HTML, CSS3, JavaScript, Web Design Responsivo e frameworks React.Js e Node.Js. Crio interfaces envolventes e funcionais, busco constantemente desafios inovadores para aprimorar minhas habilidades.
+
+                <br><br>Sou Bacharel em Ciência da Computação formado pela Universidade Nove de Julho (UNINOVE). Atualmente estou em processo para me tornar um desenvolvedor Full-Stack através da formação DevClub, onde estou aprendendo tecnologias essenciais para o mercado de trabalho, tais como:
+
+                <br><br>HTML <span>|</span> CSS <span>|</span> GIT <span>|</span> JAVASCRIPT <span>|</span> NODE.JS <span>|</span> REACT.JS <span>|</span> TYPESCRIPT <span>|</span> REACT NATIVE <span>|</span> PYTHON
+            </p>
+            <button>
+                <a href="./assets/curriculo.pdf" download="Currículo - Diego Castro">Currículo</a>
+            </button>
+        </div>
+    </section>
+
+    <section class="container-projetos" id="projetos">
+        <h2>Principais Projetos</h2>
+        <div class="cards-projetos">
+            <!-- JAVASCRIPT -->
+        </div>
+    </section>
+
+    <footer class="rodape" id="contate-me">
+        <div>
+            <h3>Copyright © 2024 - Desenvolvido por <strong>Diego Castro</strong></h3>
+        </div>
+        <div>
+            <h4>
+                <div class="contato">
+                    Contato:
+                    <a href="https://www.linkedin.com/in/cp-diego/" target="_blank" title="LinkedIn">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://github.com/cpdiego" target="_blank" title="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a class="social" href="https://wa.me/5511977799209" target="_blank" title="Whatsapp">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+            </h4>
+        </div>
+    </footer>
+</body>
+</html>
