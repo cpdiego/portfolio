@@ -1,0 +1,512 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .container-header {
+        padding: 25px 35px;
+        height: 10vh;
+    }
+
+    .logo a {
+        text-decoration: none;
+    }
+    
+    .logo h1 {
+        font-size: 38.5px;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+    
+    .logo span {
+        color: #EE7711;
+    }
+    
+    .menu nav {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .menu a {
+        font-size: 18.5px;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    
+    .menu a:hover {
+        transition: .3s ease;
+        color: #EE7711;
+    }
+
+    .menu-mobile, #btn-menu {
+        display: none;
+    }
+
+    .container-principal {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #191919;
+    }
+
+    .meu-nome {
+        display: flex;
+        flex-direction: column;
+        margin: 0 10%;
+        color: #FFFFFF;
+    }
+    
+    .meu-nome p {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 12px;
+        text-align: justify;
+    }
+    
+    .meu-nome h1 {
+        font-size: 55px;
+    }
+    
+    .meu-nome h3 {
+        font-size: 22px;
+        margin-top: 5px;
+        color: #EE7711;
+    }
+
+    .background-avatar img {
+        height: 450px;
+        width: 450px;
+    }
+
+    .container-sobre {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .avatar-sobre img {
+        height: 350px;
+        border: 3px solid #EE7711;
+        border-radius: 100%;
+    }
+
+    .sobre-mim {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-mim h2 {
+        font-size: 50px;
+        font-weight: 500;
+        color: #EE7711;
+    }
+    
+    .sobre-mim p {
+        width: 95%;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: 300;
+        margin-top: 25px;
+        margin-bottom: 42.5px;
+    }
+    
+    .sobre-mim span {
+        color: #EE7711;
+    }
+    
+    .sobre-mim button {
+        height: 45px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 30px;
+        background: #EE7711;
+        cursor: pointer;
+    }
+    
+    .sobre-mim button:hover {
+        background: transparent;
+        border: 3px solid #EE7711;
+    }
+    
+    .sobre-mim a {
+        font-size: 16.5px;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .container-projetos {
+        min-height: 100vh;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container-projetos h2 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 60px;
+    }
+    
+    .cards-projetos div {
+        height: 420px;
+        text-align: center;
+        padding: 10px 20px 5px 20px;
+        border-radius: 18px;
+        border: 2px solid #EE7711;
+        background-color: #000000;
+    }
+    
+    .cards-projetos img {
+        height: 70px;
+    }
+    
+    .cards-projetos h5 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 3px;
+        color: #EE7711;
+    }
+    
+    .cards-projetos p {
+        height: 45%;
+        font-size: 13.5px;
+        font-weight: 200;
+        text-align: justify;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos a {
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        cursor: pointer;
+        background: #EE7711;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos a:hover {
+        background: transparent;
+        border: 2px solid #EE7711;
+    }
+
+    footer {
+        padding: 23.5px;
+        height: 12vh;
+    }
+
+    footer h3, h4 {
+        display: block;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    
+    footer strong {
+        color: #EE7711;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #EE7711;
+    }
+
+    footer a:hover {
+        opacity: .8;
+        transition: .3s;
+    }
+    
+    footer a:active {
+        opacity: .6;
+    }
+    
+    footer i {
+        font-size: 25px;
+        transition: .5s;
+        position: relative;
+        top: 2px;
+    }
+    
+    footer i:hover {
+        transform: translateY(-5px);
+        transition: .5s;
+    }
+
+    .contato {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7.5px;
+    }
+}
+
+@media screen and (min-width: 834px) and (max-width: 1024px) and (orientation: landscape) {
+    .container-header {
+        padding: 25px 35px;
+        height: 15vh;
+    }
+
+    .logo a {
+        text-decoration: none;
+    }
+    
+    .logo h1 {
+        font-size: 40px;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+    
+    .logo span {
+        color: #EE7711;
+    }
+    
+    .menu nav {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .menu a {
+        font-size: 22px;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    
+    .menu a:hover {
+        transition: .3s ease;
+        color: #EE7711;
+    }
+
+    .menu-mobile, #btn-menu {
+        display: none;
+    }
+
+    .container-principal {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #191919;
+    }
+
+    .meu-nome {
+        display: flex;
+        flex-direction: column;
+        margin: 25% 2.5% 0 5%;
+        color: #FFFFFF;
+    }
+    
+    .meu-nome p {
+        width: 90%;
+        font-size: 18.5px;
+        font-weight: 300;
+        margin-top: 8px;
+        text-align: justify;
+    }
+    
+    .meu-nome h1 {
+        font-size: 45px;
+    }
+    
+    .meu-nome h3 {
+        font-size: 22px;
+        margin-top: 5px;
+        color: #EE7711;
+    }
+
+    .background-avatar {
+        margin: 16% 0 0 0;
+    }
+
+    .background-avatar img {
+        height: 430px;
+        width: 430px;
+    }
+
+    .container-sobre {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        padding: 30px 70px;
+    }
+    
+    .avatar-sobre img {
+        height: 350px;
+        border: 3px solid #EE7711;
+        border-radius: 100%;
+        margin-right: 60px;
+    }
+    
+    .sobre-mim h2 {
+        font-size: 45px;
+        font-weight: 500;
+        margin-right: 192.5px;
+        color: #EE7711;
+    }
+    
+    .sobre-mim p {
+        width: 95%;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: justify;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .sobre-mim span {
+        color: #EE7711;
+    }
+    
+    .sobre-mim button {
+        height: 45px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 30px;
+        background: #EE7711;
+        cursor: pointer;
+    }
+    
+    .sobre-mim button:hover {
+        background: transparent;
+        border: 3px solid #EE7711;
+    }
+    
+    .sobre-mim a {
+        font-size: 16.5px;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .container-projetos {
+        min-height: 100vh;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container-projetos h2 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 45px;
+    }
+    
+    .cards-projetos div {
+        height: 485px;
+        text-align: center;
+        padding: 10px 20px 5px 20px;
+        border-radius: 18px;
+        border: 2px solid #EE7711;
+        background-color: #000000;
+    }
+    
+    .cards-projetos img {
+        height: 75px;
+    }
+    
+    .cards-projetos h5 {
+        font-size: 25px;
+        font-weight: 500;
+        color: #EE7711;
+    }
+    
+    .cards-projetos p {
+        height: 48.5%;
+        font-size: 18px;
+        font-weight: 200;
+        text-align: justify;
+        margin-top: 15px;
+        margin-bottom: 50px;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos a {
+        padding: 10px 20px;
+        font-size: 14.5px;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        cursor: pointer;
+        background: #EE7711;
+        color: #FFFFFF;
+    }
+    
+    .cards-projetos a:hover {
+        background: transparent;
+        border: 2px solid #EE7711;
+    }
+
+    footer {
+        padding: 23.5px;
+        height: 18vh;
+    }
+
+    footer h3, h4 {
+        display: block;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    
+    footer strong {
+        color: #EE7711;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #EE7711;
+    }
+
+    footer a:hover {
+        opacity: .8;
+        transition: .3s;
+    }
+    
+    footer a:active {
+        opacity: .6;
+    }
+    
+    footer i {
+        font-size: 28px;
+        transition: .5s;
+        position: relative;
+        top: 2.9px;
+    }
+    
+    footer i:hover {
+        transform: translateY(-5px);
+        transition: .5s;
+    }
+
+    .contato {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7.5px;
+    }
+}
