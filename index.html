@@ -1,255 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato."
+    />
 
-  <meta name="description"
-    content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato.">
+    <meta name="theme-color" content="#070b14" />
 
-  <meta name="theme-color" content="#070b14">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="javascript.js" defer></script>
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js" defer></script>
+    <title>Diego Castro | Portfolio</title>
 
-  <title>Diego Castro | Portfolio</title>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Fontes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="estilos.css" />
 
-  <!-- Folha de estilos -->
-  <link rel="stylesheet" href="estilos.css">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+  </head>
 
-  <!-- JavaScript -->
-  <script src="script.js" defer></script>
-</head>
+  <body>
+    <main>
+      <section
+        class="secao-inicio"
+        id="inicio"
+        aria-labelledby="titulo-principal"
+      >
+        <div class="brilho-fundo" aria-hidden="true"></div>
+        <div class="grade-fundo" aria-hidden="true"></div>
 
-<body>
-
-  <main>
-    <section class="secao-inicio" id="inicio" aria-labelledby="titulo-principal">
-
-      <div class="brilho-fundo" aria-hidden="true"></div>
-      <div class="grade-fundo" aria-hidden="true"></div>
-
-      <!-- CABEÇALHO E NAVEGAÇÃO -->
-      <header class="cabecalho">
-
-        <a href="#inicio" class="logotipo" aria-label="Diego Castro, início">
-          <img src="./assets/logo-dc-sistemas.png" alt="logo-dc-sistemas">
-        </a>
-
-        <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-navegacao"
-          aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="menu-navegacao" id="menu-navegacao" aria-label="Navegação principal">
-          <a href="#inicio" class="link-menu ativo" aria-current="page">
-            Início
+        <!-- CABEÇALHO E NAVEGAÇÃO -->
+        <header class="cabecalho">
+          <a href="#inicio" class="logotipo" aria-label="Diego Castro, início">
+            <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
           </a>
 
-          <a href="#sobre" class="link-menu">Sobre</a>
-          <a href="#projetos" class="link-menu">Projetos</a>
-          <a href="#tecnologias" class="link-menu">Tecnologias</a>
-          <a href="#contato" class="link-menu">Contato</a>
-        </nav>
+          <button
+            class="botao-menu"
+            id="botao-menu"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="menu-navegacao"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-        <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
-          <span>Baixar currículo</span>
-
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
-          </svg>
-        </a>
-
-      </header>
-
-      <!-- CONTEÚDO DA APRESENTAÇÃO -->
-      <div class="conteudo-inicio">
-
-        <div class="apresentacao">
-
-          <div class="aviso-disponibilidade">
-            <span class="ponto-disponibilidade"></span>
-            <span>Olá, seja bem-vindo ao meu universo</span>
-          </div>
-
-          <h1 id="titulo-principal">
-            Diego
-            <span class="texto-gradiente">Castro</span><span class="ponto-destaque">.</span>
-          </h1>
-
-          <h2 class="titulo-profissao">
-            Desenvolvedor <span>Full Stack</span>
-          </h2>
-
-          <p class="descricao-inicio">
-            Transformo ideias em experiências digitais modernas,
-            criando sites e aplicações com foco em design,
-            desempenho e uma ótima experiência para o usuário.
-          </p>
-
-          <div class="botoes-inicio">
-
-            <a href="#projetos" class="botao botao-principal">
-              <span>Ver projetos</span>
-
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7 17 17 7M7 7h10v10" />
-              </svg>
+          <nav
+            class="menu-navegacao"
+            id="menu-navegacao"
+            aria-label="Navegação principal"
+          >
+            <a href="#inicio" class="link-menu ativo" aria-current="page">
+              Início
             </a>
 
-            <a href="#contato" class="botao botao-secundario">
+            <a href="#sobre" class="link-menu">Sobre</a>
+            <a href="#projetos" class="link-menu">Projetos</a>
+            <a href="#tecnologias" class="link-menu">Tecnologias</a>
+            <a href="#contato" class="link-menu">Contato</a>
+          </nav>
 
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
-              </svg>
+          <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
+            <span>Baixar currículo</span>
 
-              <span>Vamos conversar</span>
-            </a>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
+            </svg>
+          </a>
+        </header>
 
-          </div>
+        <!-- CONTEÚDO DA APRESENTAÇÃO -->
+        <div class="conteudo-inicio">
+          <div class="apresentacao">
+            <div class="aviso-disponibilidade">
+              <span class="ponto-disponibilidade"></span>
+              <span>Olá, seja bem-vindo ao meu universo</span>
+            </div>
 
-          <!-- REDES SOCIAIS -->
-          <div class="redes-sociais">
+            <h1 id="titulo-principal">
+              Diego
+              <span class="texto-gradiente">Castro</span
+              ><span class="ponto-destaque">.</span>
+            </h1>
 
-            <p class="legenda-redes">Me encontre em</p>
+            <h2 class="titulo-profissao">
+              Desenvolvedor <span>Full Stack</span>
+            </h2>
 
-            <div class="lista-redes">
+            <p class="descricao-inicio">
+              Transformo ideias em experiências digitais modernas, criando sites
+              e aplicações com foco em design, desempenho e uma ótima
+              experiência para o usuário.
+            </p>
 
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <div class="botoes-inicio">
+              <a href="#projetos" class="botao botao-principal">
+                <span>Ver projetos</span>
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 17 17 7M7 7h10v10" />
+                </svg>
+              </a>
+
+              <a href="#contato" class="botao botao-secundario">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
-                    d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.5 1.2 15 3.1a13.3 13.3 0 0 0-7 0C5.5 1.2 3.3 1.5 3.3 1.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.7V22" />
+                    d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"
+                  />
                 </svg>
-              </a>
 
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
+                <span>Vamos conversar</span>
               </a>
+            </div>
 
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="18" cy="6" r="1" class="icone-preenchido" />
-                </svg>
-              </a>
+            <!-- REDES SOCIAIS -->
+            <div class="redes-sociais">
+              <p class="legenda-redes">Me encontre em</p>
 
-              <a href="mailto:seuemail@exemplo.com" aria-label="Enviar e-mail">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="16" rx="3" />
-                  <path d="m3 6 9 7 9-7" />
-                </svg>
-              </a>
+              <div class="lista-redes">
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.5 1.2 15 3.1a13.3 13.3 0 0 0-7 0C5.5 1.2 3.3 1.5 3.3 1.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.7V22"
+                    />
+                  </svg>
+                </a>
 
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6ZM2 9h4v12H2z"
+                    />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="18" cy="6" r="1" class="icone-preenchido" />
+                  </svg>
+                </a>
+
+                <a
+                  href="mailto:seuemail@exemplo.com"
+                  aria-label="Enviar e-mail"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="3" />
+                    <path d="m3 6 9 7 9-7" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
-        </div>
+          <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
+          <div
+            class="area-visual"
+            aria-label="Apresentação visual do desenvolvedor"
+          >
+            <div class="orbita orbita-principal" aria-hidden="true"></div>
+            <div class="orbita orbita-secundaria" aria-hidden="true"></div>
+            <div class="brilho-retrato" aria-hidden="true"></div>
 
-        <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
-        <div class="area-visual" aria-label="Apresentação visual do desenvolvedor">
+            <div class="moldura-retrato">
+              <div class="fundo-retrato" aria-hidden="true"></div>
 
-          <div class="orbita orbita-principal" aria-hidden="true"></div>
-          <div class="orbita orbita-secundaria" aria-hidden="true"></div>
-          <div class="brilho-retrato" aria-hidden="true"></div>
+              <img
+                src="assets/diego-home.png"
+                alt="Diego Castro, desenvolvedor web"
+                class="foto-desenvolvedor"
+                width="440"
+                height="530"
+                fetchpriority="high"
+              />
 
-          <div class="moldura-retrato">
-
-            <div class="fundo-retrato" aria-hidden="true"></div>
-
-            <img src="assets/diego-home.png" alt="Diego Castro, desenvolvedor web" class="foto-desenvolvedor"
-              width="440" height="530" fetchpriority="high">
-
-            <div class="sobreposicao-retrato" aria-hidden="true"></div>
-
-          </div>
-
-          <div class="cartao-flutuante cartao-codigo">
-            <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
-
-            <div>
-              <strong>Clean Code</strong>
-              <small>Código bem estruturado</small>
+              <div class="sobreposicao-retrato" aria-hidden="true"></div>
             </div>
-          </div>
 
-          <div class="cartao-flutuante cartao-evolucao">
-            <span class="ponto-disponibilidade"></span>
+            <div class="cartao-flutuante cartao-codigo">
+              <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
 
-            <div>
-              <strong>Sempre evoluindo</strong>
-              <small>Aprendendo e construindo</small>
+              <div>
+                <strong>Clean Code</strong>
+                <small>Código bem estruturado</small>
+              </div>
             </div>
-          </div>
 
-          <div class="cartao-codigo-fonte" aria-hidden="true">
+            <div class="cartao-flutuante cartao-evolucao">
+              <span class="ponto-disponibilidade"></span>
 
-            <div class="cabecalho-codigo">
-              <div class="pontos-janela">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div>
+                <strong>Sempre evoluindo</strong>
+                <small>Aprendendo e construindo</small>
+              </div>
+            </div>
+
+            <div class="cartao-codigo-fonte" aria-hidden="true">
+              <div class="cabecalho-codigo">
+                <div class="pontos-janela">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <span>desenvolvedor.js</span>
               </div>
 
-              <span>desenvolvedor.js</span>
+              <div class="conteudo-codigo">
+                <p>
+                  <span class="palavra-chave">const</span> desenvolvedor = {
+                </p>
+                <p class="linha-recuada">
+                  nome: <span class="texto-codigo">"Diego"</span>,
+                </p>
+                <p class="linha-recuada">
+                  paixao: <span class="texto-codigo">"Código"</span>,
+                </p>
+                <p class="linha-recuada">
+                  criativo: <span class="valor-codigo">true</span>,
+                </p>
+                <p>};</p>
+                <p class="comentario-codigo">
+                  // Transformando ideias em realidade.
+                </p>
+              </div>
             </div>
 
-            <div class="conteudo-codigo">
-              <p><span class="palavra-chave">const</span> desenvolvedor = {</p>
-              <p class="linha-recuada">
-                nome: <span class="texto-codigo">"Diego"</span>,
-              </p>
-              <p class="linha-recuada">
-                paixao: <span class="texto-codigo">"Código"</span>,
-              </p>
-              <p class="linha-recuada">
-                criativo: <span class="valor-codigo">true</span>,
-              </p>
-              <p>};</p>
-              <p class="comentario-codigo">
-                // Transformando ideias em realidade.
-              </p>
-            </div>
-
+            <span
+              class="ponto-decorativo decoracao-um"
+              aria-hidden="true"
+            ></span>
+            <span
+              class="ponto-decorativo decoracao-dois"
+              aria-hidden="true"
+            ></span>
           </div>
-
-          <span class="ponto-decorativo decoracao-um" aria-hidden="true"></span>
-          <span class="ponto-decorativo decoracao-dois" aria-hidden="true"></span>
-
         </div>
 
-      </div>
-
-      <!-- INDICADOR DE ROLAGEM -->
-      <a href="#sobre" class="indicador-rolagem">
-        <span class="desenho-mouse" aria-hidden="true"></span>
-        <span>Role para explorar</span>
-      </a>
-
-      <div class="contador-secoes" aria-hidden="true">
-        <span>01</span>
-        <span class="linha-contador"></span>
-        <span>08</span>
-      </div>
-
-    </section>
-  </main>
-
-</body>
-
+        <!-- INDICADOR DE ROLAGEM -->
+        <a href="#sobre" class="indicador-rolagem">
+          <span class="desenho-mouse" aria-hidden="true"></span>
+          <span>Role para explorar</span>
+        </a>
+      </section>
+    </main>
+  </body>
 </html>

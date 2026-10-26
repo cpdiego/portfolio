@@ -15,9 +15,9 @@
   --cor-texto-secundario: #9aa8bd;
   --cor-borda: rgba(130, 160, 210, 0.17);
 
-  --fonte-titulos: "Space Grotesk", sans-serif;
-  --fonte-textos: "Inter", sans-serif;
-  --fonte-codigo: "JetBrains Mono", monospace;
+  --fonte-titulos: 'Space Grotesk', sans-serif;
+  --fonte-textos: 'Inter', sans-serif;
+  --fonte-codigo: 'JetBrains Mono', monospace;
 
   --largura-maxima: 1300px;
   --espacamento-lateral: clamp(20px, 7.5vw, 108px);
@@ -66,7 +66,6 @@ svg {
   color: white;
 }
 
-
 /* ==========================================
    2. SEÇÃO INÍCIO E FUNDOS DECORATIVOS
 ========================================== */
@@ -81,9 +80,11 @@ svg {
   padding: 0 var(--espacamento-lateral) 85px;
 
   background:
-    radial-gradient(ellipse at 78% 45%,
+    radial-gradient(
+      ellipse at 78% 45%,
       rgba(25, 82, 175, 0.12),
-      transparent 42%),
+      transparent 42%
+    ),
     var(--cor-fundo);
 }
 
@@ -108,25 +109,17 @@ svg {
   inset: 0;
 
   background-image:
-    linear-gradient(rgba(110, 150, 220, 0.035) 1px,
-      transparent 1px),
-    linear-gradient(90deg,
-      rgba(110, 150, 220, 0.035) 1px,
-      transparent 1px);
+    linear-gradient(rgba(110, 150, 220, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 150, 220, 0.035) 1px, transparent 1px);
 
   background-size: 65px 65px;
 
-  -webkit-mask-image: linear-gradient(to bottom,
-      black,
-      transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 90%);
 
-  mask-image: linear-gradient(to bottom,
-      black,
-      transparent 90%);
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
 
   pointer-events: none;
 }
-
 
 /* ==========================================
    3. CABEÇALHO
@@ -150,7 +143,7 @@ svg {
 }
 
 .logotipo img {
-  width: clamp(44px, 9vw, 200px);
+  width: clamp(44px, 9vw, 160px);
   height: 75px;
 }
 
@@ -166,7 +159,7 @@ svg {
   padding-block: 12px;
 
   color: var(--cor-texto-secundario);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 
@@ -183,7 +176,7 @@ svg {
   height: 2px;
   margin-inline: auto;
 
-  content: "";
+  content: '';
   background: var(--cor-azul);
   border-radius: 2px;
 
@@ -274,7 +267,6 @@ svg {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-
 /* ==========================================
    4. CONTEÚDO PRINCIPAL
 ========================================== */
@@ -327,7 +319,7 @@ svg {
 
 /* Cria a onda de choque de brilho verde */
 .ponto-disponibilidade::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -358,7 +350,6 @@ svg {
   }
 }
 
-
 .apresentacao h1 {
   font-family: var(--fonte-titulos);
   font-size: clamp(44px, 5.5vw, 120px);
@@ -370,10 +361,7 @@ svg {
 
 .texto-gradiente {
   color: var(--cor-azul);
-  background: linear-gradient(100deg,
-      #54adff,
-      #2583ff 55%,
-      #8c69ff);
+  background: linear-gradient(100deg, #54adff, #2583ff 55%, #8c69ff);
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -469,7 +457,6 @@ svg {
   border-color: var(--cor-azul);
 }
 
-
 /* ==========================================
    6. REDES SOCIAIS
 ========================================== */
@@ -522,7 +509,6 @@ svg {
   transform: translateY(-3px);
 }
 
-
 /* ==========================================
    7. ÁREA VISUAL E FOTO
 ========================================== */
@@ -570,10 +556,12 @@ svg {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(145deg,
-      rgba(39, 118, 255, 0.32),
-      rgba(10, 18, 37, 0.1) 60%,
-      rgba(130, 87, 255, 0.2));
+  background: linear-gradient(
+    145deg,
+    rgba(39, 118, 255, 0.32),
+    rgba(10, 18, 37, 0.1) 60%,
+    rgba(130, 87, 255, 0.2)
+  );
 }
 
 .foto-desenvolvedor {
@@ -589,13 +577,9 @@ svg {
 
   filter: saturate(0.88) contrast(1.04);
 
-  -webkit-mask-image: linear-gradient(to bottom,
-      black 72%,
-      transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
 
-  mask-image: linear-gradient(to bottom,
-      black 72%,
-      transparent 100%);
+  mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
 }
 
 .sobreposicao-retrato {
@@ -603,9 +587,7 @@ svg {
   z-index: 2;
   inset: 0;
 
-  background: linear-gradient(to bottom,
-      transparent 60%,
-      rgba(7, 11, 20, 0.4));
+  background: linear-gradient(to bottom, transparent 60%, rgba(7, 11, 20, 0.4));
 
   pointer-events: none;
 }
@@ -636,7 +618,6 @@ svg {
   /* APLICA A ANIMAÇÃO: 30 segundos por volta (velocidade diferente) e infinita */
   animation: girarOrbitaSecundaria 25s linear infinite;
 }
-
 
 /* ==========================================
    8. CARTÕES FLUTUANTES
@@ -711,7 +692,6 @@ svg {
   width: 9px;
   height: 9px;
 }
-
 
 /* ==========================================
    9. CARTÃO DE CÓDIGO DECORATIVO
@@ -834,7 +814,6 @@ svg {
   box-shadow: 0 0 18px var(--cor-roxa);
 }
 
-
 /* ==========================================
    10. INDICADORES INFERIORES
 ========================================== */
@@ -842,7 +821,9 @@ svg {
 .indicador-rolagem {
   position: absolute;
   bottom: 26px;
-  left: var(--espacamento-lateral);
+
+  left: 50%;
+  transform: translate(-50%);
 
   display: flex;
   align-items: center;
@@ -870,37 +851,12 @@ svg {
   width: 3px;
   height: 5px;
 
-  content: "";
+  content: '';
   background: var(--cor-azul-claro);
   border-radius: 3px;
 
   animation: rolar-mouse 1.5s infinite;
 }
-
-.contador-secoes {
-  position: absolute;
-  right: var(--espacamento-lateral);
-  bottom: 30px;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: #71819b;
-  font-family: var(--fonte-titulos);
-  font-size: 10px;
-}
-
-.contador-secoes span:first-child {
-  color: var(--cor-azul-claro);
-}
-
-.linha-contador {
-  width: 40px;
-  height: 1px;
-  background: #526785;
-}
-
 
 /* ==========================================
    11. ANIMAÇÕES
@@ -995,7 +951,9 @@ svg {
   border-radius: 50%;
   box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
 
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
 }
 
 /* Garante que o ícone interno herde o tamanho correto sem distorcer */
@@ -1019,7 +977,6 @@ svg {
 .whatsapp-flutuante:active {
   transform: scale(0.95);
 }
-
 
 /* ==========================================
    13. NOTEBOOKS E TELAS INTERMEDIÁRIAS
@@ -1071,7 +1028,6 @@ svg {
     left: -3%;
   }
 }
-
 
 /* ==========================================
    14. TABLETS E CELULARES
@@ -1279,7 +1235,7 @@ svg {
   .cartao-codigo-fonte {
     top: 37%;
     right: 0;
-    width: clamp(165px, 48vw, 205px);
+    width: clamp(165px, 40vw, 205px);
     padding: 11px;
     display: none;
   }
@@ -1295,12 +1251,7 @@ svg {
   .indicador-rolagem {
     bottom: 24px;
   }
-
-  .contador-secoes {
-    bottom: 28px;
-  }
 }
-
 
 /* ==========================================
    15. CELULARES ESTREITOS
@@ -1391,16 +1342,7 @@ svg {
   .indicador-rolagem {
     font-size: 9px;
   }
-
-  .contador-secoes {
-    gap: 7px;
-  }
-
-  .linha-contador {
-    width: 22px;
-  }
 }
-
 
 /* ==========================================
    16. ACESSIBILIDADE E MOVIMENTO
