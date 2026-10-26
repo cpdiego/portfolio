@@ -1267,9 +1267,9 @@ svg {
   }
 
   .logotipo img {
-    width: clamp(75px, 7.5vw, 200px);
-    height: 40px;
-    margin-top: 11.5px;
+    width: clamp(80px, 7.5vw, 200px);
+    height: 55px;
+    margin-top: 8.5px;
   }
 
   .botao-curriculo {
