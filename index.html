@@ -1,225 +1,193 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#070b14" />
+  <meta name="description"
+    content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato." />
 
-    <link rel="stylesheet" href="styles.css" />
-    <script src="javascript.js" defer></script>
+  <meta name="theme-color" content="#070b14" />
 
-    <title>Diego Castro | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="javascript.js" defer></script>
 
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Diego Castro | Portfolio</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Folha de estilos -->
-    <link rel="stylesheet" href="estilos.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- JavaScript -->
-    <script src="script.js" defer></script>
-  </head>
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="estilos.css" />
 
-  <body>
-    <main>
-      <section
-        class="secao-inicio"
-        id="inicio"
-        aria-labelledby="titulo-principal"
-      >
-        <div class="brilho-fundo" aria-hidden="true"></div>
-        <div class="grade-fundo" aria-hidden="true"></div>
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</head>
 
-        <!-- CABEÇALHO E NAVEGAÇÃO -->
-        <header class="cabecalho">
-          <a href="#inicio" class="logotipo" aria-label="Diego Castro, início">
-            <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
+<body>
+  <main>
+    <section class="secao-inicio" id="inicio" aria-labelledby="titulo-principal">
+      <div class="brilho-fundo" aria-hidden="true"></div>
+      <div class="grade-fundo" aria-hidden="true"></div>
+
+      <!-- CABEÇALHO E NAVEGAÇÃO -->
+      <header class="cabecalho">
+        <a href="/" class="logotipo" aria-label="Diego Castro, início">
+          <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
+        </a>
+
+        <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-navegacao"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="menu-navegacao" id="menu-navegacao" aria-label="Navegação principal">
+          <a href="#inicio" class="link-menu ativo" aria-current="page">
+            Início
           </a>
 
-          <button
-            class="botao-menu"
-            id="botao-menu"
-            type="button"
-            aria-label="Abrir menu"
-            aria-controls="menu-navegacao"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <a href="#sobre" class="link-menu">Sobre</a>
+          <a href="#projetos" class="link-menu">Projetos</a>
+          <a href="#tecnologias" class="link-menu">Tecnologias</a>
+          <a href="#contato" class="link-menu">Contato</a>
+        </nav>
 
-          <nav
-            class="menu-navegacao"
-            id="menu-navegacao"
-            aria-label="Navegação principal"
-          >
-            <a href="#inicio" class="link-menu ativo" aria-current="page">
-              Início
-            </a>
+        <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
+          <span>Baixar currículo</span>
 
-            <a href="#sobre" class="link-menu">Sobre</a>
-            <a href="#projetos" class="link-menu">Projetos</a>
-            <a href="#tecnologias" class="link-menu">Tecnologias</a>
-            <a href="#contato" class="link-menu">Contato</a>
-          </nav>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
+          </svg>
+        </a>
+      </header>
 
-          <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
-            <span>Baixar currículo</span>
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
-            </svg>
-          </a>
-        </header>
-
-        <!-- CONTEÚDO DA APRESENTAÇÃO -->
-        <div class="conteudo-inicio">
-          <div class="apresentacao">
-            <div class="aviso-disponibilidade">
-              <span class="ponto-disponibilidade"></span>
-              <span>Olá, seja bem-vindo ao meu universo</span>
-            </div>
-
-            <h1 id="titulo-principal">
-              Diego
-              <span class="texto-gradiente">Castro</span
-              ><span class="ponto-destaque">.</span>
-            </h1>
-
-            <h2 class="titulo-profissao">
-              Desenvolvedor <span>Full Stack</span>
-            </h2>
-
-            <p class="descricao-inicio">
-              Transformo ideias em experiências digitais modernas, criando sites
-              e aplicações com foco em design, desempenho e uma ótima
-              experiência para o usuário.
-            </p>
-
-            <div class="botoes-inicio">
-              <a href="#projetos" class="botao botao-principal">
-                <span>Ver projetos</span>
-
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 17 17 7M7 7h10v10" />
-                </svg>
-              </a>
-
-              <a href="#contato" class="botao botao-secundario">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"
-                  />
-                </svg>
-
-                <span>Vamos conversar</span>
-              </a>
-            </div>
+      <!-- CONTEÚDO DA APRESENTAÇÃO -->
+      <div class="conteudo-inicio">
+        <div class="apresentacao">
+          <div class="aviso-disponibilidade">
+            <span class="ponto-disponibilidade"></span>
+            <span>Olá, seja bem-vindo ao meu universo</span>
           </div>
 
-          <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
-          <div
-            class="area-visual"
-            aria-label="Apresentação visual do desenvolvedor"
-          >
-            <div class="orbita orbita-principal" aria-hidden="true"></div>
-            <div class="orbita orbita-secundaria" aria-hidden="true"></div>
-            <div class="brilho-retrato" aria-hidden="true"></div>
+          <h1 id="titulo-principal">
+            Diego
+            <span class="texto-gradiente">Castro</span><span class="ponto-destaque">.</span>
+          </h1>
 
-            <div class="moldura-retrato">
-              <div class="fundo-retrato" aria-hidden="true"></div>
+          <h2 class="titulo-profissao">
+            Desenvolvedor <span>Full Stack</span>
+          </h2>
 
-              <img
-                src="assets/diego-home.png"
-                alt="Diego Castro, desenvolvedor web"
-                class="foto-desenvolvedor"
-                width="440"
-                height="530"
-                fetchpriority="high"
-              />
+          <p class="descricao-inicio">
+            Transformo ideias em experiências digitais modernas, criando sites
+            e aplicações com foco em design, desempenho e uma ótima
+            experiência para o usuário.
+          </p>
 
-              <div class="sobreposicao-retrato" aria-hidden="true"></div>
-            </div>
+          <div class="botoes-inicio">
+            <a href="#projetos" class="botao botao-principal">
+              <span>Ver projetos</span>
 
-            <div class="cartao-flutuante cartao-codigo">
-              <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
 
-              <div>
-                <strong>Clean Code</strong>
-                <small>Código bem estruturado</small>
-              </div>
-            </div>
+            <a href="#contato" class="botao botao-secundario">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg>
 
-            <div class="cartao-flutuante cartao-evolucao">
-              <span class="ponto-disponibilidade"></span>
-
-              <div>
-                <strong>Sempre evoluindo</strong>
-                <small>Aprendendo e construindo</small>
-              </div>
-            </div>
-
-            <div class="cartao-codigo-fonte" aria-hidden="true">
-              <div class="cabecalho-codigo">
-                <div class="pontos-janela">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <span>desenvolvedor.js</span>
-              </div>
-
-              <div class="conteudo-codigo">
-                <p>
-                  <span class="palavra-chave">const</span> desenvolvedor = {
-                </p>
-                <p class="linha-recuada">
-                  nome: <span class="texto-codigo">"Diego"</span>,
-                </p>
-                <p class="linha-recuada">
-                  paixao: <span class="texto-codigo">"Código"</span>,
-                </p>
-                <p class="linha-recuada">
-                  criativo: <span class="valor-codigo">true</span>,
-                </p>
-                <p>};</p>
-                <p class="comentario-codigo">
-                  // Transformando ideias em realidade.
-                </p>
-              </div>
-            </div>
-
-            <span
-              class="ponto-decorativo decoracao-um"
-              aria-hidden="true"
-            ></span>
-            <span
-              class="ponto-decorativo decoracao-dois"
-              aria-hidden="true"
-            ></span>
+              <span>Vamos conversar</span>
+            </a>
           </div>
         </div>
 
-        <!-- INDICADOR DE ROLAGEM -->
-        <a href="#sobre" class="indicador-rolagem">
-          <span class="desenho-mouse" aria-hidden="true"></span>
-          <span>Role para explorar</span>
-        </a>
-      </section>
-    </main>
-  </body>
+        <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
+        <div class="area-visual" aria-label="Apresentação visual do desenvolvedor">
+          <div class="orbita orbita-principal" aria-hidden="true"></div>
+          <div class="orbita orbita-secundaria" aria-hidden="true"></div>
+          <div class="brilho-retrato" aria-hidden="true"></div>
+
+          <div class="moldura-retrato">
+            <div class="fundo-retrato" aria-hidden="true"></div>
+
+            <img src="assets/diego-home.png" alt="Diego Castro, desenvolvedor web" class="foto-desenvolvedor"
+              width="440" height="530" fetchpriority="high" />
+
+            <div class="sobreposicao-retrato" aria-hidden="true"></div>
+          </div>
+
+          <div class="cartao-flutuante cartao-codigo">
+            <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
+
+            <div>
+              <strong>Clean Code</strong>
+              <small>Código bem estruturado</small>
+            </div>
+          </div>
+
+          <div class="cartao-flutuante cartao-evolucao">
+            <span class="ponto-disponibilidade"></span>
+
+            <div>
+              <strong>Sempre evoluindo</strong>
+              <small>Aprendendo e construindo</small>
+            </div>
+          </div>
+
+          <div class="cartao-codigo-fonte" aria-hidden="true">
+            <div class="cabecalho-codigo">
+              <div class="pontos-janela">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>desenvolvedor.js</span>
+            </div>
+
+            <div class="conteudo-codigo">
+              <p>
+                <span class="palavra-chave">const</span> desenvolvedor = {
+              </p>
+              <p class="linha-recuada">
+                nome: <span class="texto-codigo">"Diego"</span>,
+              </p>
+              <p class="linha-recuada">
+                paixao: <span class="texto-codigo">"Código"</span>,
+              </p>
+              <p class="linha-recuada">
+                criativo: <span class="valor-codigo">true</span>,
+              </p>
+              <p>};</p>
+              <p class="comentario-codigo">
+                // Transformando ideias em realidade.
+              </p>
+            </div>
+          </div>
+
+          <span class="ponto-decorativo decoracao-um" aria-hidden="true"></span>
+          <span class="ponto-decorativo decoracao-dois" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- INDICADOR DE ROLAGEM -->
+      <a href="#sobre" class="indicador-rolagem">
+        <span class="desenho-mouse" aria-hidden="true"></span>
+        <span>Role para explorar</span>
+      </a>
+    </section>
+  </main>
+</body>
+
 </html>

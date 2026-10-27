@@ -80,11 +80,9 @@ svg {
   padding: 110px var(--espacamento-lateral) 85px;
 
   background:
-    radial-gradient(
-      ellipse at 78% 45%,
+    radial-gradient(ellipse at 78% 45%,
       rgba(25, 82, 175, 0.12),
-      transparent 42%
-    ),
+      transparent 42%),
     var(--cor-fundo);
 }
 
@@ -142,7 +140,44 @@ svg {
   min-height: 92px;
   margin-inline: auto;
 
+  background: rgba(7, 11, 20, 0.82);
+  background: color-mix(in srgb, var(--cor-fundo) 82%, transparent);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cabecalho::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 92px;
+
+  z-index: -1;
+
+  background: rgba(7, 11, 20, 0.82);
+  background: color-mix(in srgb, var(--cor-fundo) 82%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  pointer-events: none;
+}
+
+.cabecalho::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Cria uma linha fina cirúrgica que fica por cima do desfoque */
   border-bottom: 1px solid var(--cor-borda);
+
+  z-index: 5;
+  pointer-events: none;
 }
 
 .logotipo img {
@@ -559,12 +594,10 @@ svg {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    145deg,
-    rgba(39, 118, 255, 0.32),
-    rgba(10, 18, 37, 0.1) 60%,
-    rgba(130, 87, 255, 0.2)
-  );
+  background: linear-gradient(145deg,
+      rgba(39, 118, 255, 0.32),
+      rgba(10, 18, 37, 0.1) 60%,
+      rgba(130, 87, 255, 0.2));
 }
 
 .foto-desenvolvedor {
@@ -1046,14 +1079,14 @@ svg {
   }
 
   .cabecalho {
-    min-height: 76px;
+    min-height: 92px;
     gap: 10px;
   }
 
   .logotipo img {
     width: clamp(100px, 12.5vw, 200px);
     height: 60px;
-    margin-top: 12.5px;
+    margin: 6px 0 0 14px;
   }
 
   .botao-curriculo {
@@ -1071,6 +1104,7 @@ svg {
 
   .botao-menu {
     display: block;
+    margin-right: 20px;
   }
 
   /* Menu suspenso para celular */
@@ -1132,7 +1166,7 @@ svg {
   /* Conteúdo passa para uma coluna */
   .conteudo-inicio {
     grid-template-columns: minmax(0, 1fr);
-    gap: 15px;
+    gap: 48px;
 
     min-height: auto;
     padding-top: clamp(40px, 8vw, 60px);
@@ -1272,7 +1306,7 @@ svg {
   .logotipo img {
     width: clamp(80px, 7.5vw, 200px);
     height: 55px;
-    margin-top: 8.5px;
+    margin: 8.5px 0 0 12px;
   }
 
   .botao-curriculo {
