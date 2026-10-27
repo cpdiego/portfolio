@@ -77,7 +77,7 @@ svg {
   min-height: 100svh;
   overflow: clip;
 
-  padding: 0 var(--espacamento-lateral) 85px;
+  padding: 110px var(--espacamento-lateral) 85px;
 
   background:
     radial-gradient(
@@ -126,7 +126,10 @@ svg {
 ========================================== */
 
 .cabecalho {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 20;
 
   display: flex;
