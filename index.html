@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#070b14" />
 
   <link rel="stylesheet" href="styles.css" />
-  <script src="javascript.js" defer></script>
+  <script src="script.js" defer></script>
 
   <title>Diego Castro | Portfolio</title>
 
@@ -22,52 +22,48 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-
-  <!-- Folha de estilos -->
-  <link rel="stylesheet" href="estilos.css" />
-
-  <!-- JavaScript -->
-  <script src="script.js" defer></script>
 </head>
 
 <body>
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <header class="cabecalho">
+    <a href="/" class="logotipo" aria-label="Diego Castro, início">
+      <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
+    </a>
+
+    <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-navegacao"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu-navegacao" id="menu-navegacao" aria-label="Navegação principal">
+      <a href="#inicio" class="link-menu ativo" aria-current="page">
+        Início
+      </a>
+
+      <a href="#sobre" class="link-menu">Sobre</a>
+      <a href="#projetos" class="link-menu">Projetos</a>
+      <a href="#tecnologias" class="link-menu">Tecnologias</a>
+      <a href="#contato" class="link-menu">Contato</a>
+    </nav>
+
+    <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
+      <span>Baixar currículo</span>
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
+      </svg>
+    </a>
+  </header>
   <main>
+    <!-- ==========================================
+          SEÇÃO HOME
+    ========================================== -->
     <section class="secao-inicio" id="inicio" aria-labelledby="titulo-principal">
       <div class="brilho-fundo" aria-hidden="true"></div>
       <div class="grade-fundo" aria-hidden="true"></div>
-
-      <!-- CABEÇALHO E NAVEGAÇÃO -->
-      <header class="cabecalho">
-        <a href="/" class="logotipo" aria-label="Diego Castro, início">
-          <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
-        </a>
-
-        <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-navegacao"
-          aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="menu-navegacao" id="menu-navegacao" aria-label="Navegação principal">
-          <a href="#inicio" class="link-menu ativo" aria-current="page">
-            Início
-          </a>
-
-          <a href="#sobre" class="link-menu">Sobre</a>
-          <a href="#projetos" class="link-menu">Projetos</a>
-          <a href="#tecnologias" class="link-menu">Tecnologias</a>
-          <a href="#contato" class="link-menu">Contato</a>
-        </nav>
-
-        <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
-          <span>Baixar currículo</span>
-
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
-          </svg>
-        </a>
-      </header>
 
       <!-- CONTEÚDO DA APRESENTAÇÃO -->
       <div class="conteudo-inicio">
@@ -187,6 +183,112 @@
         <span>Role para explorar</span>
       </a>
     </section>
+
+
+    <!-- ==========================================
+     SEÇÃO SOBRE
+========================================== -->
+
+    <section class="secao-sobre" id="sobre" aria-labelledby="titulo-sobre">
+
+      <div class="sobre-container">
+
+        <!-- Cabeçalho -->
+        <header class="sobre-cabecalho animar-sobre">
+
+          <span class="sobre-etiqueta">
+            <span class="sobre-ponto"></span>
+            CONHEÇA MINHA TRAJETÓRIA
+          </span>
+
+          <h2 id="titulo-sobre">
+            Tecnologia com propósito.
+            <span>Código com estratégia.</span>
+          </h2>
+
+          <p class="sobre-introducao">
+            Minha experiência em TI é a base para minha evolução
+            no desenvolvimento de soluções digitais modernas,
+            funcionais e pensadas para pessoas.
+          </p>
+
+        </header>
+
+        <!-- Conteúdo principal -->
+        <div class="sobre-conteudo">
+
+          <div class="sobre-texto animar-sobre">
+
+            <span class="sobre-subtitulo">
+              <span class="sobre-sinal">01</span>
+              QUEM SOU EU
+            </span>
+
+            <h3>
+              Olá, eu sou o
+              <span>Diego Castro.</span>
+            </h3>
+
+            <p>
+              Atuo na área de tecnologia da informação desde
+              dezembro de 2016, com experiência em infraestrutura,
+              backup e monitoramento de ambientes de TI.
+            </p>
+
+            <p>
+              Essa trajetória me proporcionou uma visão prática
+              sobre estabilidade, organização, análise de problemas
+              e a importância de soluções confiáveis. Hoje, levo
+              essa bagagem para minha evolução no desenvolvimento
+              de sites e aplicações web.
+            </p>
+
+            <p>
+              Meu objetivo é transformar ideias em experiências
+              digitais intuitivas, combinando lógica, criatividade
+              e atenção aos detalhes em cada projeto.
+            </p>
+
+            <!-- Destaques existentes -->
+            <div class="sobre-destaques">
+
+              <article class="sobre-cartao-destaque">
+                <span class="sobre-icone" aria-hidden="true">
+                  &lt;/&gt;
+                </span>
+
+                <div>
+                  <h4>Desenvolvimento</h4>
+                  <p>Construindo soluções para a web.</p>
+                </div>
+              </article>
+
+              <article class="sobre-cartao-destaque">
+                <span class="sobre-icone" aria-hidden="true">
+                  { }
+                </span>
+
+                <div>
+                  <h4>Experiência em TI</h4>
+                  <p>Uma base técnica construída na prática.</p>
+                </div>
+              </article>
+
+            </div>
+
+            <a href="#projetos" class="sobre-botao">
+              Conheça meus projetos
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 </body>
 

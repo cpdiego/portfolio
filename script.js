@@ -102,3 +102,40 @@ document.addEventListener("keydown", (evento) => {
 consultaCelular.addEventListener("change", () => {
   fecharMenu();
 });
+
+
+/* ==========================================
+   7. SEÇÃO SOBRE — ANIMAÇÃO DE ENTRADA
+========================================== */
+
+const elementosAnimadosSobre =
+  document.querySelectorAll(".animar-sobre");
+
+function mostrarElementosSobre() {
+  elementosAnimadosSobre.forEach((elemento) => {
+    elemento.classList.add("sobre-visivel");
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  const observadorSobre = new IntersectionObserver(
+    (entradas, observador) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("sobre-visivel");
+          observador.unobserve(entrada.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -35px 0px"
+    }
+  );
+
+  elementosAnimadosSobre.forEach((elemento) => {
+    observadorSobre.observe(elemento);
+  });
+} else {
+  mostrarElementosSobre();
+}
