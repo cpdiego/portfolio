@@ -1819,3 +1819,144 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   BOTÃO - WHATSAPP
+========================================== */
+
+
+/* Botão flutuante do WhatsApp */
+.botao-whatsapp {
+  position: fixed;
+  right: 25px;
+  bottom: 28px;
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  color: #ffffff;
+  background: linear-gradient(145deg,
+      var(--cor-azul),
+      #1265e8);
+
+  border: 1px solid color-mix(in srgb,
+      var(--cor-azul) 70%,
+      white);
+
+  box-shadow:
+    0 0 12px color-mix(in srgb, var(--cor-azul) 65%, transparent),
+    0 0 28px color-mix(in srgb, var(--cor-azul) 35%, transparent),
+    0 0 0 0 color-mix(in srgb, var(--cor-azul) 60%, transparent);
+
+  text-decoration: none;
+
+  animation: pulsar-whatsapp 1.5s ease-out infinite;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Ícone de conversa */
+.icone-whatsapp {
+  width: 32px;
+  height: 32px;
+}
+
+/* Pulsação roxa ao redor do botão */
+@keyframes pulsar-whatsapp {
+  0% {
+    box-shadow:
+      0 8px 24px color-mix(in srgb, var(--cor-roxa) 25%, transparent),
+      0 0 0 0 color-mix(in srgb, var(--cor-roxa) 60%, transparent);
+  }
+
+  70% {
+    box-shadow:
+      0 8px 24px color-mix(in srgb, var(--cor-roxa) 25%, transparent),
+      0 0 0 24px transparent;
+  }
+
+  100% {
+    box-shadow:
+      0 8px 24px color-mix(in srgb, var(--cor-roxa) 25%, transparent),
+      0 0 0 0 transparent;
+  }
+}
+
+.mensagem-whatsapp {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+
+  transform: translate(8px, -50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  white-space: nowrap;
+  padding: 6px 35px;
+
+  background: #10101a;
+  color: #ffffff;
+
+  border: 1px solid var(--cor-roxa);
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cor-roxa) 20%, transparent);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+@media (hover: hover) {
+  .botao-whatsapp:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+      0 0 18px color-mix(in srgb, var(--cor-roxa) 80%, transparent),
+      0 0 36px color-mix(in srgb, var(--cor-roxa) 50%, transparent),
+      0 0 0 8px color-mix(in srgb, var(--cor-roxa) 20%, transparent);
+  }
+
+  .botao-whatsapp:hover .mensagem-whatsapp {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+  }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+  .botao-whatsapp {
+    right: 18px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .icone-whatsapp {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .botao-whatsapp {
+    animation: none;
+    transition: none;
+  }
+}
