@@ -173,7 +173,14 @@ svg {
   right: 0;
 
   /* Cria uma linha fina cirúrgica que fica por cima do desfoque */
-  border-bottom: 1px solid var(--cor-borda);
+  width: min(1300px, 100%);
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.48),
+      rgba(155, 123, 255, 0.35),
+      transparent);
 
   z-index: 5;
   pointer-events: none;
@@ -962,58 +969,6 @@ svg {
 }
 
 /* ==========================================
-   12. BOTÃO FLUTUANTE DO WHATSAPP
-========================================== */
-
-.whatsapp-flutuante {
-  position: fixed;
-  /* Fixa o elemento em relação à janela do navegador */
-  bottom: 24px;
-  /* Distância do fundo da página */
-  right: 24px;
-  /* Distância do canto direito */
-  z-index: 999;
-  /* Garante que ele fique acima de absolutamente tudo no site */
-
-  display: grid;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-
-  background: #25d366;
-  /* Verde oficial do WhatsApp */
-  color: white;
-  border-radius: 50%;
-  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
-
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease;
-}
-
-/* Garante que o ícone interno herde o tamanho correto sem distorcer */
-.whatsapp-flutuante .icone-whatsapp {
-  width: 32px;
-  height: 32px;
-  fill: currentColor;
-  /* Pega a cor branca do texto */
-}
-
-/* Efeito ao passar o mouse */
-.whatsapp-flutuante:hover {
-  transform: scale(1.1) translateY(-3px);
-  /* Aumenta levemente e sobe */
-  background-color: #20ba5a;
-  /* Tom de verde ligeiramente mais escuro */
-  box-shadow: 0 7px 22px rgba(37, 211, 102, 0.5);
-}
-
-/* Opcional: Garante que o clique seja suave se o usuário estiver no celular */
-.whatsapp-flutuante:active {
-  transform: scale(0.95);
-}
-
-/* ==========================================
    13. NOTEBOOKS E TELAS INTERMEDIÁRIAS
 ========================================== */
 
@@ -1407,7 +1362,7 @@ button:focus-visible {
 ========================================== */
 
 .secao-sobre {
-  --sobre-fundo: #0a1428;
+  --sobre-fundo: #081124;
   --sobre-cartao: rgba(13, 28, 52, 0.82);
   --sobre-borda: rgba(87, 164, 255, 0.22);
   --sobre-azul: #57a4ff;
@@ -1455,8 +1410,6 @@ button:focus-visible {
       transparent);
 
   pointer-events: none;
-
-  display: none;
 }
 
 /* Iluminação ambiente */
@@ -1928,6 +1881,25 @@ button:focus-visible {
       rgba(130, 87, 255, 0.08),
       transparent 38%),
     var(--cor-fundo);
+}
+
+.secao-projetos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(1300px, 85%);
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.48),
+      rgba(155, 123, 255, 0.35),
+      transparent);
+
+  pointer-events: none;
 }
 
 .conteudo-projetos {
@@ -2611,6 +2583,2141 @@ button:focus-visible {
   }
 }
 
+/* ==========================================
+   SEÇÃO TECNOLOGIAS — FUNDO AZUL-MARINHO
+========================================== */
+
+.secao-tecnologias {
+  --tec-fundo: #081124;
+  --tec-cartao: rgba(13, 29, 54, 0.88);
+  --tec-borda: rgba(87, 164, 255, 0.2);
+  --tec-azul: #57a4ff;
+  --tec-roxo: #9b7bff;
+  --tec-texto: #f1f5ff;
+  --tec-texto-suave: #b0bdd2;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  padding: clamp(80px, 9vw, 125px) var(--espacamento-lateral);
+
+  color: var(--tec-texto);
+  background: var(--tec-fundo);
+}
+
+/* Linha de separação da seção anterior */
+.secao-tecnologias::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(1300px, 85%);
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.48),
+      rgba(155, 123, 255, 0.35),
+      transparent);
+
+  pointer-events: none;
+}
+
+/* Iluminação ambiente */
+.secao-tecnologias::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background:
+    radial-gradient(ellipse at 50% 10%,
+      rgba(37, 99, 235, 0.08),
+      transparent 45%),
+    radial-gradient(ellipse at 0% 65%,
+      rgba(124, 58, 237, 0.055),
+      transparent 35%);
+
+  pointer-events: none;
+}
+
+.tecnologias-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin-inline: auto;
+}
+
+/* ==========================================
+   LUZES DECORATIVAS ANIMADAS
+========================================== */
+
+.tecnologias-luz {
+  position: absolute;
+  z-index: -1;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+  filter: blur(100px);
+
+  opacity: 0.14;
+  pointer-events: none;
+
+  animation: tecnologias-flutuar 10s ease-in-out infinite alternate;
+}
+
+.tecnologias-luz-um {
+  top: 12%;
+  left: -130px;
+  background: #2583ff;
+}
+
+.tecnologias-luz-dois {
+  top: 48%;
+  right: -140px;
+
+  background: #8257ff;
+  animation-delay: -4s;
+}
+
+@keyframes tecnologias-flutuar {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(35px, 45px, 0);
+  }
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.tecnologias-cabecalho {
+  max-width: 850px;
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+.tecnologias-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: var(--tec-azul);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tecnologias-ponto {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: var(--tec-azul);
+
+  box-shadow: 0 0 14px rgba(87, 164, 255, 0.8);
+
+  animation: tecnologias-pulsar 1.8s ease-in-out infinite;
+}
+
+@keyframes tecnologias-pulsar {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 14px rgba(87, 164, 255, 0.8);
+  }
+
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 24px rgba(87, 164, 255, 0.4);
+  }
+}
+
+.tecnologias-cabecalho h2 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  font-weight: 800;
+}
+
+.tecnologias-cabecalho h2 span {
+  display: block;
+
+  color: transparent;
+  background: linear-gradient(100deg,
+      var(--tec-azul),
+      var(--tec-roxo));
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.tecnologias-introducao {
+  max-width: 690px;
+  margin: 24px auto 0;
+
+  color: var(--tec-texto-suave);
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   INDICADORES DO TOPO
+========================================== */
+
+.tecnologias-resumo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin: 0 auto 65px;
+}
+
+.tecnologias-indicador {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 205px;
+  padding: 16px 20px;
+
+  border: 1px solid rgba(87, 164, 255, 0.14);
+  border-radius: 13px;
+
+  background: rgba(9, 21, 41, 0.5);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tecnologias-indicador:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(87, 164, 255, 0.4);
+  background: rgba(16, 37, 68, 0.7);
+}
+
+.indicador-icone {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border: 1px solid rgba(87, 164, 255, 0.2);
+  border-radius: 11px;
+
+  background: rgba(87, 164, 255, 0.09);
+  color: var(--tec-azul);
+
+  font-family: var(--fonte-codigo);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.tecnologias-indicador div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tecnologias-indicador strong {
+  color: var(--tec-texto);
+  font-size: 0.88rem;
+}
+
+.tecnologias-indicador div span {
+  color: var(--tec-texto-suave);
+  font-size: 0.76rem;
+}
+
+/* ==========================================
+   GRUPOS DE TECNOLOGIAS
+========================================== */
+
+.tecnologias-grupo {
+  margin-bottom: 52px;
+}
+
+.tecnologias-titulo-grupo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.tecnologias-numero {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border: 1px solid var(--tec-borda);
+  border-radius: 10px;
+
+  background: rgba(87, 164, 255, 0.07);
+  color: var(--tec-azul);
+
+  font-family: var(--fonte-codigo);
+  font-size: 0.75rem;
+}
+
+.tecnologias-titulo-grupo h3 {
+  margin: 0;
+
+  color: var(--tec-texto);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.tecnologias-linha {
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      rgba(87, 164, 255, 0.25),
+      transparent);
+}
+
+.tecnologias-contagem {
+  color: var(--tec-texto-suave);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   GRADE DOS CARDS
+========================================== */
+
+.tecnologias-grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tecnologias-grade-dupla {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ==========================================
+   CARDS DAS TECNOLOGIAS
+========================================== */
+
+.tecnologia-cartao {
+  --cor-destaque: 87, 164, 255;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 218px;
+  padding: 22px;
+
+  border: 1px solid rgba(87, 164, 255, 0.16);
+  border-radius: 17px;
+
+  background: linear-gradient(145deg,
+      rgba(17, 35, 62, 0.88),
+      rgba(10, 24, 45, 0.94));
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* Reflexo que atravessa o card */
+.tecnologia-cartao::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  top: -100%;
+  left: -70%;
+
+  width: 55%;
+  height: 300%;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.055),
+      transparent);
+
+  transform: rotate(25deg) translateX(-160%);
+  transition: transform 0.75s ease;
+
+  pointer-events: none;
+}
+
+/* Brilho interno */
+.tecnologia-cartao::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  top: -70px;
+  right: -70px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  background: rgba(var(--cor-destaque), 0.08);
+  filter: blur(45px);
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+.tecnologia-cartao.visivel {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: calc(var(--indice, 0) * 75ms);
+}
+
+.tecnologia-cartao.visivel:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(var(--cor-destaque), 0.55);
+
+  background: linear-gradient(145deg,
+      rgba(20, 43, 76, 0.98),
+      rgba(12, 28, 52, 0.98));
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.2),
+    0 0 25px rgba(var(--cor-destaque), 0.07);
+}
+
+.tecnologia-cartao.visivel:hover::before {
+  transform: rotate(25deg) translateX(420%);
+}
+
+.tecnologia-cartao.visivel:hover::after {
+  opacity: 1;
+}
+
+/* Cabeçalho de cada card */
+.tecnologia-cartao-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+.tecnologia-simbolo {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border: 1px solid rgba(var(--cor-destaque), 0.24);
+  border-radius: 13px;
+
+  background: rgba(var(--cor-destaque), 0.1);
+  color: rgb(var(--cor-destaque));
+
+  font-family: var(--fonte-codigo);
+  font-size: 1.08rem;
+  font-weight: 800;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tecnologia-cartao.visivel:hover .tecnologia-simbolo {
+  transform: scale(1.07) rotate(-4deg);
+
+  box-shadow: 0 0 22px rgba(var(--cor-destaque), 0.13);
+}
+
+.tecnologia-status {
+  max-width: 110px;
+  padding: 5px 8px;
+
+  border: 1px solid rgba(176, 189, 210, 0.12);
+  border-radius: 20px;
+
+  color: var(--tec-texto-suave);
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+/* Cores dos símbolos */
+.simbolo-html {
+  --cor-destaque: 228, 91, 49;
+}
+
+.simbolo-css {
+  --cor-destaque: 48, 143, 220;
+}
+
+.simbolo-js {
+  --cor-destaque: 247, 207, 65;
+}
+
+.simbolo-react {
+  --cor-destaque: 97, 218, 251;
+}
+
+.simbolo-node {
+  --cor-destaque: 112, 190, 92;
+}
+
+.simbolo-python {
+  --cor-destaque: 90, 165, 220;
+}
+
+.simbolo-git {
+  --cor-destaque: 240, 100, 70;
+}
+
+.simbolo-github {
+  --cor-destaque: 205, 215, 232;
+}
+
+.simbolo-vscode {
+  --cor-destaque: 57, 160, 240;
+}
+
+.simbolo-n8n {
+  --cor-destaque: 255, 112, 112;
+}
+
+.simbolo-zabbix {
+  --cor-destaque: 235, 78, 82;
+}
+
+/* Nome e descrição */
+.tecnologia-cartao h4 {
+  margin: 0 0 9px;
+
+  color: var(--tec-texto);
+  font-size: 1.04rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.tecnologia-cartao>p {
+  flex: 1;
+
+  margin: 0 0 22px;
+
+  color: var(--tec-texto-suave);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+/* Rodapé do card */
+.tecnologia-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding-top: 14px;
+  border-top: 1px solid rgba(176, 189, 210, 0.1);
+}
+
+.tecnologia-categoria {
+  color: rgba(176, 189, 210, 0.85);
+  font-size: 0.69rem;
+}
+
+.tecnologia-seta {
+  color: var(--tec-azul);
+  font-size: 1rem;
+
+  opacity: 0.6;
+  transform: translate(0, 0);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tecnologia-cartao.visivel:hover .tecnologia-seta {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   RODAPÉ DA SEÇÃO
+========================================== */
+
+.tecnologias-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 20px;
+  padding: 35px 20px 0;
+
+  border-top: 1px solid rgba(87, 164, 255, 0.12);
+
+  text-align: center;
+}
+
+.tecnologias-final-icone {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+
+  margin-bottom: 14px;
+
+  border: 1px solid rgba(155, 123, 255, 0.24);
+  border-radius: 12px;
+
+  background: rgba(155, 123, 255, 0.08);
+  color: var(--tec-roxo);
+
+  font-size: 1.2rem;
+
+  animation: tecnologias-girar 12s linear infinite;
+}
+
+@keyframes tecnologias-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tecnologias-final p {
+  margin: 0 0 8px;
+
+  color: var(--tec-texto-suave);
+  font-size: 1rem;
+}
+
+.tecnologias-final strong {
+  color: var(--tec-texto);
+}
+
+.tecnologias-final-detalhe {
+  color: rgba(176, 189, 210, 0.75);
+  font-size: 0.82rem;
+}
+
+/* ==========================================
+   ANIMAÇÕES DE ENTRADA
+========================================== */
+
+.animar-tecnologias {
+  opacity: 0;
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.animar-tecnologias.tecnologias-visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1050px) {
+  .tecnologias-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tecnologias-grade-dupla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tecnologias-cartao {
+    min-height: 210px;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 680px) {
+  .secao-tecnologias {
+    padding: 72px 20px;
+  }
+
+  .tecnologias-cabecalho {
+    margin-bottom: 36px;
+  }
+
+  .tecnologias-cabecalho h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    letter-spacing: -1px;
+  }
+
+  .tecnologias-introducao {
+    font-size: 0.94rem;
+    line-height: 1.8;
+  }
+
+  .tecnologias-resumo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    margin-bottom: 48px;
+  }
+
+  .tecnologias-indicador {
+    min-width: 0;
+    padding: 13px 16px;
+  }
+
+  .tecnologias-grupo {
+    margin-bottom: 42px;
+  }
+
+  .tecnologias-titulo-grupo {
+    gap: 10px;
+    margin-bottom: 17px;
+  }
+
+  .tecnologias-titulo-grupo h3 {
+    font-size: 1rem;
+  }
+
+  .tecnologias-contagem {
+    display: none;
+  }
+
+  .tecnologias-grade,
+  .tecnologias-grade-dupla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .tecnologia-cartao {
+    min-height: 205px;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .tecnologia-cartao-topo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 19px;
+  }
+
+  .tecnologia-simbolo {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    font-size: 0.95rem;
+  }
+
+  .tecnologia-status {
+    max-width: 100%;
+    font-size: 0.6rem;
+  }
+
+  .tecnologia-cartao h4 {
+    font-size: 0.92rem;
+  }
+
+  .tecnologia-cartao>p {
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  .tecnologia-categoria {
+    font-size: 0.62rem;
+  }
+
+  .tecnologia-rodape {
+    gap: 5px;
+  }
+
+  .tecnologias-final {
+    padding-top: 28px;
+  }
+}
+
+/* Celulares muito estreitos */
+@media (max-width: 360px) {
+
+  .tecnologias-grade,
+  .tecnologias-grade-dupla {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia-cartao {
+    min-height: auto;
+  }
+
+  .tecnologia-cartao-topo {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tecnologias-luz,
+  .tecnologias-ponto,
+  .tecnologias-final-icone {
+    animation: none;
+  }
+
+  .animar-tecnologias,
+  .tecnologia-cartao {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tecnologia-cartao::before {
+    display: none;
+  }
+
+  .tecnologias-indicador,
+  .tecnologia-cartao.visivel:hover,
+  .tecnologias-indicador:hover {
+    transform: none;
+  }
+
+  .tecnologia-cartao.visivel:hover .tecnologia-simbolo,
+  .tecnologia-cartao.visivel:hover .tecnologia-seta {
+    transform: none;
+  }
+}
+
+/* ==========================================
+   SEÇÃO - CONTATO
+========================================== */
+
+.secao-contato {
+  --contato-fundo: #070b14;
+  --contato-painel: rgba(13, 22, 40, 0.88);
+  --contato-campo: rgba(7, 14, 27, 0.78);
+  --contato-borda: rgba(130, 160, 210, 0.19);
+  --contato-azul: #57a4ff;
+  --contato-roxo: #8257ff;
+  --contato-texto: #f4f7ff;
+  --contato-suave: #9aa8bd;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  padding: clamp(80px, 9vw, 125px) var(--espacamento-lateral);
+
+  color: var(--contato-texto);
+  background: var(--contato-fundo);
+}
+
+/* Linha superior */
+.secao-contato::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(1300px, 85%);
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.4),
+      rgba(130, 87, 255, 0.35),
+      transparent);
+
+  pointer-events: none;
+}
+
+/* Iluminação ambiente */
+.secao-contato::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background:
+    radial-gradient(ellipse at 15% 30%,
+      rgba(37, 131, 255, 0.1),
+      transparent 36%),
+    radial-gradient(ellipse at 90% 75%,
+      rgba(130, 87, 255, 0.09),
+      transparent 38%);
+
+  pointer-events: none;
+}
+
+.contato-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin-inline: auto;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.contato-cabecalho {
+  max-width: 850px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.contato-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: var(--contato-azul);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contato-ponto {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: var(--contato-azul);
+  box-shadow: 0 0 14px rgba(87, 164, 255, 0.8);
+
+  animation: contato-pulsar 1.8s ease-in-out infinite;
+}
+
+@keyframes contato-pulsar {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 14px rgba(87, 164, 255, 0.8);
+  }
+
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 24px rgba(87, 164, 255, 0.4);
+  }
+}
+
+.contato-cabecalho h2 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  font-weight: 800;
+}
+
+.contato-cabecalho h2 span {
+  display: block;
+
+  color: transparent;
+  background: linear-gradient(100deg,
+      var(--contato-azul),
+      var(--contato-roxo));
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.contato-cabecalho>p {
+  max-width: 680px;
+  margin: 24px auto 0;
+
+  color: var(--contato-suave);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   LAYOUT PRINCIPAL
+========================================== */
+
+.contato-conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(30px, 5vw, 70px);
+}
+
+/* ==========================================
+   COLUNA DE INFORMAÇÕES
+========================================== */
+
+.contato-informacoes {
+  padding-top: 15px;
+}
+
+.contato-intro {
+  margin-bottom: 30px;
+}
+
+.contato-numero {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: var(--contato-azul);
+  font-family: var(--fonte-codigo);
+  font-size: 0.72rem;
+  letter-spacing: 1.4px;
+}
+
+.contato-intro h3 {
+  margin: 0 0 18px;
+
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.contato-intro h3 span {
+  display: block;
+
+  color: transparent;
+  background: linear-gradient(100deg,
+      var(--contato-azul),
+      var(--contato-roxo));
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.contato-intro>p {
+  margin: 0;
+
+  color: var(--contato-suave);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* Links de e-mail e WhatsApp */
+.contato-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  min-width: 0;
+  margin-bottom: 14px;
+  padding: 17px;
+
+  border: 1px solid var(--contato-borda);
+  border-radius: 14px;
+
+  background: rgba(13, 22, 40, 0.62);
+
+  color: var(--contato-texto);
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contato-link:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(87, 164, 255, 0.5);
+  background: rgba(16, 29, 51, 0.9);
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.contato-link-icone {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border: 1px solid rgba(87, 164, 255, 0.2);
+  border-radius: 12px;
+
+  background: rgba(87, 164, 255, 0.1);
+  color: var(--contato-azul);
+}
+
+.contato-link-icone svg {
+  width: 21px;
+  height: 21px;
+
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contato-icone-whatsapp {
+  color: #64dfa0;
+  border-color: rgba(100, 223, 160, 0.2);
+  background: rgba(100, 223, 160, 0.08);
+}
+
+.contato-link-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.contato-link-texto small {
+  color: var(--contato-suave);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contato-link-texto strong {
+  overflow-wrap: anywhere;
+
+  color: var(--contato-texto);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.contato-link-seta {
+  color: var(--contato-azul);
+  font-size: 1.1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.contato-link:hover .contato-link-seta {
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   REDES SOCIAIS
+========================================== */
+
+.contato-redes {
+  margin-top: 35px;
+}
+
+.contato-redes-titulo {
+  display: block;
+  margin-bottom: 16px;
+
+  color: var(--contato-suave);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.contato-redes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contato-rede {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+
+  border: 1px solid var(--contato-borda);
+  border-radius: 13px;
+
+  background: rgba(13, 22, 40, 0.72);
+  color: var(--contato-suave);
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contato-rede svg {
+  width: 21px;
+  height: 21px;
+}
+
+.contato-rede:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(87, 164, 255, 0.55);
+  background: rgba(37, 131, 255, 0.12);
+  color: var(--contato-azul);
+
+  box-shadow: 0 8px 24px rgba(37, 131, 255, 0.12);
+}
+
+/* Disponibilidade */
+.contato-disponibilidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.contato-disponibilidade-ponto {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  position: relative;
+
+  border-radius: 50%;
+  background: #64dfa0;
+  box-shadow: 0 0 12px rgba(100, 223, 160, 0.5);
+}
+
+.contato-disponibilidade-ponto::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(64, 223, 154, 0.8);
+  animation: pulsarBrilho 1.2s infinite ease-out;
+}
+
+/* Animação compartilhada entre Início e Contato */
+@keyframes pulsarBrilho {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(64, 223, 154, 0.8);
+  }
+
+  100% {
+    transform: scale(4.5);
+    opacity: 0;
+    box-shadow: 0 0 12px rgba(64, 223, 154, 0);
+  }
+}
+
+.contato-disponibilidade p {
+  margin: 0;
+
+  color: var(--contato-suave);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   PAINEL DO FORMULÁRIO
+========================================== */
+
+.contato-formulario-caixa {
+  position: relative;
+  overflow: hidden;
+
+  padding: clamp(24px, 3.5vw, 40px);
+
+  border: 1px solid rgba(130, 160, 210, 0.2);
+  border-radius: 22px;
+
+  background: linear-gradient(145deg,
+      rgba(16, 27, 48, 0.96),
+      rgba(10, 17, 31, 0.97));
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.contato-formulario-caixa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.7),
+      rgba(130, 87, 255, 0.5),
+      transparent);
+
+  pointer-events: none;
+}
+
+.contato-formulario-cabecalho {
+  margin-bottom: 30px;
+}
+
+.contato-formulario-cabecalho .contato-numero {
+  margin-bottom: 12px;
+}
+
+.contato-formulario-cabecalho h3 {
+  margin: 0 0 10px;
+
+  color: var(--contato-texto);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  letter-spacing: -0.7px;
+}
+
+.contato-formulario-cabecalho p {
+  margin: 0;
+
+  color: var(--contato-suave);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   CAMPOS DO FORMULÁRIO
+========================================== */
+
+.contato-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contato-campos-duplos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contato-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.contato-campo label {
+  color: #dce5f5;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.contato-campo input,
+.contato-campo select,
+.contato-campo textarea {
+  width: 100%;
+  min-width: 0;
+
+  padding: 14px 15px;
+
+  border: 1px solid rgba(130, 160, 210, 0.2);
+  border-radius: 10px;
+  outline: none;
+
+  background: var(--contato-campo);
+  color: var(--contato-texto);
+
+  font: inherit;
+  font-size: 0.85rem;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.contato-campo input,
+.contato-campo select {
+  min-height: 49px;
+}
+
+.contato-campo textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.contato-campo input::placeholder,
+.contato-campo textarea::placeholder {
+  color: #71819a;
+  opacity: 1;
+}
+
+.contato-campo select {
+  cursor: pointer;
+}
+
+.contato-campo select:invalid {
+  color: #71819a;
+}
+
+.contato-campo select option {
+  color: var(--contato-texto);
+  background: #101b30;
+}
+
+/* Destaque dos campos ao receber foco */
+.contato-campo input:focus,
+.contato-campo select:focus,
+.contato-campo textarea:focus {
+  border-color: var(--contato-azul);
+
+  background: rgba(10, 22, 41, 0.98);
+
+  box-shadow:
+    0 0 0 3px rgba(87, 164, 255, 0.09),
+    0 0 20px rgba(87, 164, 255, 0.05);
+}
+
+.contato-campo input:focus-visible,
+.contato-campo select:focus-visible,
+.contato-campo textarea:focus-visible {
+  outline: 2px solid rgba(87, 164, 255, 0.45);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   CONSENTIMENTO
+========================================== */
+
+.contato-consentimento {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  color: var(--contato-suave);
+  font-size: 0.76rem;
+  line-height: 1.7;
+
+  cursor: pointer;
+}
+
+.contato-consentimento input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+
+  margin-top: 3px;
+  accent-color: var(--contato-azul);
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   BOTÃO DE ENVIO
+========================================== */
+
+.contato-enviar {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 54px;
+  padding: 15px 22px;
+
+  border: 1px solid rgba(110, 177, 255, 0.5);
+  border-radius: 11px;
+
+  background: linear-gradient(100deg,
+      #2583ff,
+      #6556ed);
+
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 24px rgba(37, 131, 255, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+.contato-enviar:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+  box-shadow: 0 12px 32px rgba(37, 131, 255, 0.27);
+}
+
+.contato-enviar:active {
+  transform: translateY(0);
+}
+
+.contato-enviar:focus-visible {
+  outline: 2px solid var(--contato-azul);
+  outline-offset: 4px;
+}
+
+.contato-enviar-seta {
+  font-size: 1.1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.contato-enviar:hover .contato-enviar-seta {
+  transform: translate(3px, -3px);
+}
+
+.contato-formulario-nota {
+  margin: -5px 0 0;
+
+  color: #71819a;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contato-formulario-status {
+  display: none;
+  margin: 0;
+
+  color: var(--contato-azul);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contato-formulario-status.ativo {
+  display: block;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE — SEÇÃO CONTATO
+========================================== */
+
+/* Evita que campos e painéis ultrapassem os contêineres */
+.secao-contato,
+.secao-contato * {
+  box-sizing: border-box;
+}
+
+.contato-container {
+  width: 100%;
+  min-width: 0;
+}
+
+.contato-conteudo,
+.contato-informacoes,
+.contato-formulario-caixa,
+.contato-formulario,
+.contato-campo {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Tablets e telas menores */
+@media (max-width: 1000px) {
+  .secao-contato {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .contato-cabecalho {
+    max-width: 720px;
+    margin-bottom: 44px;
+  }
+
+  .contato-conteudo {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .contato-informacoes {
+    padding-top: 0;
+  }
+
+  .contato-intro {
+    margin-bottom: 24px;
+  }
+
+  .contato-intro h3 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .contato-formulario-caixa {
+    width: 100%;
+    padding: clamp(24px, 4vw, 36px);
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .secao-contato {
+    padding: 76px 20px 64px;
+  }
+
+  .secao-contato::before {
+    width: 85%;
+  }
+
+  .contato-cabecalho {
+    margin-bottom: 36px;
+  }
+
+  .contato-etiqueta {
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+  }
+
+  .contato-cabecalho h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+  }
+
+  .contato-cabecalho>p {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .contato-conteudo {
+    gap: 32px;
+  }
+
+  .contato-numero {
+    font-size: 0.68rem;
+  }
+
+  .contato-intro h3 {
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+  }
+
+  .contato-intro>p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  /* Cartões de e-mail e WhatsApp */
+  .contato-link {
+    gap: 11px;
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+
+  .contato-link-icone {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .contato-link-texto {
+    gap: 5px;
+  }
+
+  .contato-link-texto small {
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+  }
+
+  .contato-link-texto strong {
+    font-size: 0.78rem;
+    overflow-wrap: anywhere;
+  }
+
+  .contato-link-seta {
+    flex-shrink: 0;
+    font-size: 0.95rem;
+  }
+
+  .contato-redes {
+    margin-top: 28px;
+  }
+
+  .contato-disponibilidade {
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+
+  .contato-disponibilidade-ponto {
+    margin-top: 5px;
+  }
+
+  .contato-disponibilidade p {
+    font-size: 0.75rem;
+  }
+
+  /* Formulário */
+  .contato-formulario-caixa {
+    padding: 22px 16px;
+    border-radius: 17px;
+  }
+
+  .contato-formulario-cabecalho {
+    margin-bottom: 24px;
+  }
+
+  .contato-formulario-cabecalho h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .contato-formulario-cabecalho p {
+    font-size: 0.82rem;
+  }
+
+  .contato-formulario {
+    gap: 17px;
+  }
+
+  /* Nome, e-mail, telefone e assunto em coluna única */
+  .contato-campos-duplos {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .contato-campo {
+    width: 100%;
+  }
+
+  .contato-campo label {
+    font-size: 0.8rem;
+  }
+
+  .contato-campo input,
+  .contato-campo select,
+  .contato-campo textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 12px;
+    font-size: 16px;
+  }
+
+  .contato-campo input,
+  .contato-campo select {
+    min-height: 48px;
+  }
+
+  .contato-campo textarea {
+    min-height: 130px;
+  }
+
+  .contato-consentimento {
+    gap: 9px;
+    font-size: 0.72rem;
+    line-height: 1.65;
+  }
+
+  .contato-consentimento input {
+    margin-top: 3px;
+  }
+
+  .contato-enviar {
+    min-height: 52px;
+    padding: 14px 12px;
+    font-size: 0.85rem;
+  }
+
+  .contato-formulario-nota {
+    font-size: 0.68rem;
+  }
+}
+
+/* Celulares estreitos */
+@media (max-width: 360px) {
+  .secao-contato {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .contato-formulario-caixa {
+    padding: 20px 13px;
+  }
+
+  .contato-link {
+    gap: 9px;
+    padding: 12px 10px;
+  }
+
+  .contato-link-icone {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contato-link-texto strong {
+    font-size: 0.74rem;
+  }
+
+  .contato-cabecalho h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+
+  .secao-contato *,
+  .secao-contato *::before,
+  .secao-contato *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+.rodape {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  background: var(--cor-fundo);
+  border: none;
+}
+
+.rodape::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(1300px, 85%);
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(87, 164, 255, 0.48),
+      rgba(155, 123, 255, 0.35),
+      transparent);
+
+  pointer-events: none;
+
+}
+
+/* Contêiner alinhado ao cabeçalho */
+.rodape-container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  transform: translateX(-1%);
+
+}
+
+/* Linha principal: logo, links e botão */
+.rodape-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 30px);
+
+  width: 100%;
+  min-height: 92px;
+  padding: 22px 0;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.rodape-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.rodape-logo img {
+  width: clamp(44px, 9vw, 160px);
+  height: 75px;
+}
+
+/* Navegação central */
+.rodape-navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  gap: clamp(12px, 1.8vw, 26px);
+  min-width: 0;
+}
+
+.rodape-navegacao a {
+  position: relative;
+  color: var(--cor-texto-secundario);
+  font-family: var(--fonte-textos);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape-navegacao a:hover {
+  color: var(--cor-texto);
+}
+
+/* Botão voltar ao topo */
+.rodape-voltar-topo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 0 0 auto;
+
+  padding: 11px 15px;
+  margin: 0;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+
+  font-family: var(--fonte-textos);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rodape-voltar-topo:hover {
+  border-color: var(--cor-azul);
+  background: var(--cor-cartao);
+  transform: translateY(-2px);
+}
+
+/* Direitos autorais: sem borda divisória */
+.rodape-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+  padding: 18px 0 22px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.rodape-inferior p {
+  margin: 0;
+  color: var(--cor-texto-secundario);
+  font-family: var(--fonte-textos);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   NOTEBOOKS E TABLETS
+========================================== */
+
+@media (max-width: 1000px) {
+  .rodape-container {
+    padding-inline: clamp(24px, 5vw, 50px);
+  }
+
+  .rodape-conteudo {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 28px;
+    padding: 28px 0;
+  }
+
+  .rodape-logo {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .rodape-logo img {
+    width: 130px;
+  }
+
+  .rodape-navegacao {
+    flex: 0 1 auto;
+    justify-content: center;
+    gap: 18px 24px;
+  }
+
+  .rodape-voltar-topo {
+    flex: 0 0 auto;
+  }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+  .rodape {
+    margin-top: 28px;
+    padding-bottom: 16px;
+  }
+
+  .rodape-container {
+    padding-inline: 20px;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 0 24px;
+  }
+
+  .rodape-logo {
+    flex: 0 0 auto;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rodape-logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  .rodape-navegacao {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 18px 22px;
+    width: 100%;
+  }
+
+  .rodape-navegacao a {
+    font-size: 12px;
+  }
+
+  .rodape-voltar-topo {
+    width: 100%;
+    max-width: 250px;
+    min-height: 44px;
+  }
+
+  .rodape-inferior {
+    padding: 16px 0 4px;
+  }
+
+  .rodape-inferior p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+}
+
+/* ==========================================
+   CELULARES ESTREITOS
+========================================== */
+
+@media (max-width: 360px) {
+  .rodape-container {
+    padding-inline: 16px;
+  }
+
+  .rodape-conteudo {
+    gap: 22px;
+  }
+
+  .rodape-navegacao {
+    gap: 16px 18px;
+  }
+
+  .rodape-navegacao a {
+    font-size: 11px;
+  }
+
+  .rodape-voltar-topo {
+    max-width: 100%;
+  }
+
+  .rodape-inferior p {
+    font-size: 10px;
+  }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+
+  .rodape *,
+  .rodape *::before,
+  .rodape *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* ==========================================
    BOTÃO - WHATSAPP
