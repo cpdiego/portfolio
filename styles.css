@@ -1024,12 +1024,12 @@ svg {
 /* Ajuste do cabeçalho para notebooks */
 @media (min-width: 769px) and (max-width: 1366px) {
   .cabecalho {
-    padding-inline: 4.5%;
+    padding-inline: 5.5%;
   }
 
   .cabecalho::after {
-    left: 5.3%;
-    right: 4.5%;
+    left: 6.2%;
+    right: 5.5%;
   }
 }
 
