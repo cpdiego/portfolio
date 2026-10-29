@@ -1,359 +1,525 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#070b14" />
+  <meta name="description"
+    content="Portfólio de Diego Castro, desenvolvedor web. Conheça meus projetos e entre em contato." />
 
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+  <meta name="theme-color" content="#070b14" />
 
-    <title>Diego Castro | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Diego Castro | Portfolio</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <body>
-    <!-- CABEÇALHO E NAVEGAÇÃO -->
-    <header class="cabecalho">
-      <a href="/" class="logotipo" aria-label="Diego Castro, início">
-        <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <header class="cabecalho">
+    <a href="#inicio" class="logotipo" aria-label="Diego Castro, início">
+      <img src="./assets/logo-dc-developer.png" alt="logo-dc-developer" />
+    </a>
+
+    <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-navegacao"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu-navegacao" id="menu-navegacao" aria-label="Navegação principal">
+      <a href="#inicio" class="link-menu ativo" aria-current="page">
+        Início
       </a>
 
-      <button
-        class="botao-menu"
-        id="botao-menu"
-        type="button"
-        aria-label="Abrir menu"
-        aria-controls="menu-navegacao"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="#sobre" class="link-menu">Sobre</a>
+      <a href="#projetos" class="link-menu">Projetos</a>
+      <a href="#tecnologias" class="link-menu">Tecnologias</a>
+      <a href="#contato" class="link-menu">Contato</a>
+    </nav>
 
-      <nav
-        class="menu-navegacao"
-        id="menu-navegacao"
-        aria-label="Navegação principal"
-      >
-        <a href="#inicio" class="link-menu ativo" aria-current="page">
-          Início
-        </a>
+    <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
+      <span>Baixar currículo</span>
 
-        <a href="#sobre" class="link-menu">Sobre</a>
-        <a href="#projetos" class="link-menu">Projetos</a>
-        <a href="#tecnologias" class="link-menu">Tecnologias</a>
-        <a href="#contato" class="link-menu">Contato</a>
-      </nav>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
+      </svg>
+    </a>
+  </header>
+  <main>
+    <!-- ==========================================
+          SEÇÃO - INÍCIO
+      ========================================== -->
+    <section class="secao-inicio" id="inicio" aria-labelledby="titulo-principal">
+      <div class="brilho-fundo" aria-hidden="true"></div>
+      <div class="grade-fundo" aria-hidden="true"></div>
 
-      <a href="imagens/curriculo.pdf" class="botao-curriculo" download>
-        <span>Baixar currículo</span>
-
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4" />
-        </svg>
-      </a>
-    </header>
-    <main>
-      <!-- ==========================================
-          SEÇÃO HOME
-    ========================================== -->
-      <section
-        class="secao-inicio"
-        id="inicio"
-        aria-labelledby="titulo-principal"
-      >
-        <div class="brilho-fundo" aria-hidden="true"></div>
-        <div class="grade-fundo" aria-hidden="true"></div>
-
-        <!-- CONTEÚDO DA APRESENTAÇÃO -->
-        <div class="conteudo-inicio">
-          <div class="apresentacao">
-            <div class="aviso-disponibilidade">
-              <span class="ponto-disponibilidade"></span>
-              <span>Olá, seja bem-vindo ao meu universo</span>
-            </div>
-
-            <h1 id="titulo-principal">
-              Diego
-              <span class="texto-gradiente">Castro</span
-              ><span class="ponto-destaque">.</span>
-            </h1>
-
-            <h2 class="titulo-profissao">
-              Desenvolvedor <span>Full Stack</span>
-            </h2>
-
-            <p class="descricao-inicio">
-              Transformo ideias em experiências digitais modernas, criando
-              sites, aplicações e robôs de WhatsApp automatizados para
-              atendimento, vendas e agendamento, sempre com foco em design,
-              desempenho e conversão.
-            </p>
-
-            <div class="botoes-inicio">
-              <a href="#projetos" class="botao botao-principal">
-                <span>Ver projetos</span>
-
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M7 17 17 7M7 7h10v10" />
-                </svg>
-              </a>
-
-              <a href="#contato" class="botao botao-secundario">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"
-                  />
-                </svg>
-
-                <span>Vamos conversar</span>
-              </a>
-            </div>
+      <!-- CONTEÚDO DA APRESENTAÇÃO -->
+      <div class="conteudo-inicio">
+        <div class="apresentacao">
+          <div class="aviso-disponibilidade">
+            <span class="ponto-disponibilidade"></span>
+            <span>Olá, seja bem-vindo ao meu universo</span>
           </div>
 
-          <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
-          <div
-            class="area-visual"
-            aria-label="Apresentação visual do desenvolvedor"
-          >
-            <div class="orbita orbita-principal" aria-hidden="true"></div>
-            <div class="orbita orbita-secundaria" aria-hidden="true"></div>
-            <div class="brilho-retrato" aria-hidden="true"></div>
+          <h1 id="titulo-principal">
+            Diego
+            <span class="texto-gradiente">Castro</span><span class="ponto-destaque">.</span>
+          </h1>
 
-            <div class="moldura-retrato">
-              <div class="fundo-retrato" aria-hidden="true"></div>
+          <h2 class="titulo-profissao">
+            Desenvolvedor <span>Full Stack</span>
+          </h2>
 
-              <img
-                src="assets/diego-home.png"
-                alt="Diego Castro, desenvolvedor web"
-                class="foto-desenvolvedor"
-                width="440"
-                height="530"
-                fetchpriority="high"
-              />
+          <p class="descricao-inicio">
+            Transformo ideias em experiências digitais modernas, criando
+            sites, aplicações e robôs de WhatsApp automatizados para
+            atendimento, vendas e agendamento, sempre com foco em design,
+            desempenho e conversão.
+          </p>
 
-              <div class="sobreposicao-retrato" aria-hidden="true"></div>
-            </div>
+          <div class="botoes-inicio">
+            <a href="#projetos" class="botao botao-principal">
+              <span>Ver projetos</span>
 
-            <div class="cartao-flutuante cartao-codigo">
-              <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
 
-              <div>
-                <strong>Clean Code</strong>
-                <small>Código bem estruturado</small>
-              </div>
-            </div>
+            <a href="#contato" class="botao botao-secundario">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg>
 
-            <div class="cartao-flutuante cartao-evolucao">
-              <span class="ponto-disponibilidade"></span>
-
-              <div>
-                <strong>Sempre evoluindo</strong>
-                <small>Aprendendo e construindo</small>
-              </div>
-            </div>
-
-            <div class="cartao-codigo-fonte" aria-hidden="true">
-              <div class="cabecalho-codigo">
-                <div class="pontos-janela">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <span>desenvolvedor.js</span>
-              </div>
-
-              <div class="conteudo-codigo">
-                <p>
-                  <span class="palavra-chave">const</span> desenvolvedor = {
-                </p>
-                <p class="linha-recuada">
-                  nome: <span class="texto-codigo">"Diego"</span>,
-                </p>
-                <p class="linha-recuada">
-                  paixao: <span class="texto-codigo">"Código"</span>,
-                </p>
-                <p class="linha-recuada">
-                  criativo: <span class="valor-codigo">true</span>,
-                </p>
-                <p>};</p>
-                <p class="comentario-codigo">
-                  // Transformando ideias em realidade.
-                </p>
-              </div>
-            </div>
-
-            <span
-              class="ponto-decorativo decoracao-um"
-              aria-hidden="true"
-            ></span>
-            <span
-              class="ponto-decorativo decoracao-dois"
-              aria-hidden="true"
-            ></span>
+              <span>Vamos conversar</span>
+            </a>
           </div>
         </div>
 
-        <!-- INDICADOR DE ROLAGEM -->
-        <a href="#sobre" class="indicador-rolagem">
-          <span class="desenho-mouse" aria-hidden="true"></span>
-          <span>Role para explorar</span>
-        </a>
-      </section>
+        <!-- IMAGEM E ELEMENTOS DECORATIVOS -->
+        <div class="area-visual" aria-label="Apresentação visual do desenvolvedor">
+          <div class="orbita orbita-principal" aria-hidden="true"></div>
+          <div class="orbita orbita-secundaria" aria-hidden="true"></div>
+          <div class="brilho-retrato" aria-hidden="true"></div>
 
-      <!-- ==========================================
-          SEÇÃO SOBRE
-    ========================================== -->
+          <div class="moldura-retrato">
+            <div class="fundo-retrato" aria-hidden="true"></div>
 
-      <section class="secao-sobre" id="sobre" aria-labelledby="titulo-sobre">
-        <div class="sobre-container">
-          <!-- Cabeçalho -->
-          <header class="sobre-cabecalho animar-sobre">
-            <span class="sobre-etiqueta">
-              <span class="sobre-ponto"></span>
-              CONHEÇA MINHA TRAJETÓRIA
+            <img src="assets/diego-home.png" alt="Diego Castro, desenvolvedor web" class="foto-desenvolvedor"
+              width="440" height="530" fetchpriority="high" />
+
+            <div class="sobreposicao-retrato" aria-hidden="true"></div>
+          </div>
+
+          <div class="cartao-flutuante cartao-codigo">
+            <span class="icone-codigo" aria-hidden="true">&lt;/&gt;</span>
+
+            <div>
+              <strong>Clean Code</strong>
+              <small>Código bem estruturado</small>
+            </div>
+          </div>
+
+          <div class="cartao-flutuante cartao-evolucao">
+            <span class="ponto-disponibilidade"></span>
+
+            <div>
+              <strong>Sempre evoluindo</strong>
+              <small>Aprendendo e construindo</small>
+            </div>
+          </div>
+
+          <div class="cartao-codigo-fonte" aria-hidden="true">
+            <div class="cabecalho-codigo">
+              <div class="pontos-janela">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>desenvolvedor.js</span>
+            </div>
+
+            <div class="conteudo-codigo">
+              <p>
+                <span class="palavra-chave">const</span> desenvolvedor = {
+              </p>
+              <p class="linha-recuada">
+                nome: <span class="texto-codigo">"Diego"</span>,
+              </p>
+              <p class="linha-recuada">
+                paixao: <span class="texto-codigo">"Código"</span>,
+              </p>
+              <p class="linha-recuada">
+                criativo: <span class="valor-codigo">true</span>,
+              </p>
+              <p>};</p>
+              <p class="comentario-codigo">
+                // Transformando ideias em realidade.
+              </p>
+            </div>
+          </div>
+
+          <span class="ponto-decorativo decoracao-um" aria-hidden="true"></span>
+          <span class="ponto-decorativo decoracao-dois" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- INDICADOR DE ROLAGEM -->
+      <a href="#sobre" class="indicador-rolagem">
+        <span class="desenho-mouse" aria-hidden="true"></span>
+        <span>Role para explorar</span>
+      </a>
+    </section>
+
+    <!-- ==========================================
+          SEÇÃO - SOBRE
+      ========================================== -->
+
+    <section class="secao-sobre" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="sobre-container">
+        <!-- Cabeçalho -->
+        <header class="sobre-cabecalho animar-sobre">
+          <span class="sobre-etiqueta">
+            <span class="sobre-ponto"></span>
+            CONHEÇA MINHA TRAJETÓRIA
+          </span>
+
+          <h2 id="titulo-sobre">
+            Tecnologia com propósito.
+            <span>Código com estratégia.</span>
+          </h2>
+
+          <p class="sobre-introducao">
+            Minha experiência em TI é a base para minha evolução no
+            desenvolvimento de soluções digitais modernas, funcionais e
+            pensadas para pessoas.
+          </p>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <div class="sobre-conteudo">
+          <div class="sobre-texto animar-sobre">
+            <span class="sobre-subtitulo">
+              <span class="sobre-sinal">01</span>
+              QUEM SOU EU
             </span>
 
-            <h2 id="titulo-sobre">
-              Tecnologia com propósito.
-              <span>Código com estratégia.</span>
-            </h2>
+            <h3>
+              Olá, eu sou o
+              <span>Diego Castro.</span>
+            </h3>
 
-            <p class="sobre-introducao">
-              Minha experiência em TI é a base para minha evolução no
-              desenvolvimento de soluções digitais modernas, funcionais e
-              pensadas para pessoas.
+            <p>
+              Atuo no mercado de Tecnologia da Informação desde dezembro de
+              2016. Minha jornada começou na base da TI, onde adquiri sólida
+              experiência em infraestrutura, backup e monitoramento de
+              ambientes. Essa bagagem me deu uma visão altamente prática sobre
+              estabilidade, segurança, organização e resolução de problemas
+              complexos.
             </p>
-          </header>
 
-          <!-- Conteúdo principal -->
-          <div class="sobre-conteudo">
-            <div class="sobre-texto animar-sobre">
-              <span class="sobre-subtitulo">
-                <span class="sobre-sinal">01</span>
-                QUEM SOU EU
-              </span>
+            <p>
+              Hoje, levo essa maturidade técnica para o desenvolvimento de
+              sites, aplicações web e soluções inteligentes. Não crio apenas
+              páginas integradas e bonitas; eu desenvolvo ecossistemas
+              digitais que geram resultados.
+            </p>
 
-              <h3>
-                Olá, eu sou o
-                <span>Diego Castro.</span>
-              </h3>
+            <span class="sobre-subtitulo">
+              <span class="sobre-sinal">02</span>
+              O QUE EU FAÇO
+            </span>
 
-              <p>
-                Atuo no mercado de Tecnologia da Informação desde dezembro de
-                2016. Minha jornada começou na base da TI, onde adquiri sólida
-                experiência em infraestrutura, backup e monitoramento de
-                ambientes. Essa bagagem me deu uma visão altamente prática sobre
-                estabilidade, segurança, organização e resolução de problemas
-                complexos.
-              </p>
+            <h4>Desenvolvimento WEB:</h4>
+            <p>
+              Sites e aplicações modernas com foco em design responsivo, alto
+              desempenho e excelente experiência do usuário.
+            </p>
 
-              <p>
-                Hoje, levo essa maturidade técnica para o desenvolvimento de
-                sites, aplicações web e soluções inteligentes. Não crio apenas
-                páginas integradas e bonitas; eu desenvolvo ecossistemas
-                digitais que geram resultados.
-              </p>
+            <h4>Automações & IA:</h4>
+            <p>
+              Integração de Inteligência Artificial para otimizar processos
+              internos, eliminar tarefas repetitivas e reduzir custos
+              operacionais.
+            </p>
 
-              <span class="sobre-subtitulo">
-                <span class="sobre-sinal">02</span>
-                O QUE EU FAÇO
-              </span>
+            <h4>Robôs de WhatsApp:</h4>
+            <p>
+              Criação de assistentes virtuais inteligentes e automatizados,
+              configurados estrategicamente para atender, vender e agendar de
+              forma autônoma 24/7.
+            </p>
 
-              <h4>Desenvolvimento WEB:</h4>
-              <p>
-                Sites e aplicações modernas com foco em design responsivo, alto
-                desempenho e excelente experiência do usuário.
-              </p>
+            <!-- Destaques existentes -->
+            <div class="sobre-destaques">
+              <article class="sobre-cartao-destaque">
+                <span class="sobre-icone" aria-hidden="true">
+                  &lt;/&gt;
+                </span>
 
-              <h4>Automações & IA:</h4>
-              <p>
-                Integração de Inteligência Artificial para otimizar processos
-                internos, eliminar tarefas repetitivas e reduzir custos
-                operacionais.
-              </p>
+                <div>
+                  <h4>Desenvolvimento</h4>
+                  <p>Construindo soluções para a web.</p>
+                </div>
+              </article>
 
-              <h4>Robôs de WhatsApp:</h4>
-              <p>
-                Criação de assistentes virtuais inteligentes e automatizados,
-                configurados estrategicamente para atender, vender e agendar de
-                forma autônoma 24/7.
-              </p>
+              <article class="sobre-cartao-destaque">
+                <span class="sobre-icone" aria-hidden="true"> { } </span>
 
-              <!-- Destaques existentes -->
-              <div class="sobre-destaques">
-                <article class="sobre-cartao-destaque">
-                  <span class="sobre-icone" aria-hidden="true">
-                    &lt;/&gt;
-                  </span>
-
-                  <div>
-                    <h4>Desenvolvimento</h4>
-                    <p>Construindo soluções para a web.</p>
-                  </div>
-                </article>
-
-                <article class="sobre-cartao-destaque">
-                  <span class="sobre-icone" aria-hidden="true"> { } </span>
-
-                  <div>
-                    <h4>Experiência em TI</h4>
-                    <p>Uma base técnica construída na prática.</p>
-                  </div>
-                </article>
-              </div>
-
-              <a href="#projetos" class="sobre-botao">
-                Conheça meus projetos
-                <span aria-hidden="true">↗</span>
-              </a>
+                <div>
+                  <h4>Experiência em TI</h4>
+                  <p>Uma base técnica construída na prática.</p>
+                </div>
+              </article>
             </div>
+
+            <a href="#projetos" class="sobre-botao">
+              Conheça meus projetos
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- Botão flutuante do WhatsApp -->
-    <a
-      href="https://wa.me/5511977799209?text=Ol%C3%A1%21%20Vim%20pelo%20site%20DC%20Developer%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20cria%C3%A7%C3%A3o%20de%20sites%2C%20aplica%C3%A7%C3%B5es%20web%20e%20integra%C3%A7%C3%A3o%20de%20automa%C3%A7%C3%B5es%20inteligentes%20com%20IA"
-      class="botao-whatsapp"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Entre em contato pelo WhatsApp"
-    >
-      <svg
-        class="icone-whatsapp"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <path
-          d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"
-        />
-      </svg>
-      <span class="mensagem-whatsapp"> Fale comigo pelo Whatsapp 🟢 </span>
-    </a>
-  </body>
+    <!-- ==========================================
+          SEÇÃO - PROJETOS
+      ========================================== -->
+    <section class="secao-projetos" id="projetos">
+      <div class="conteudo-projetos">
+
+        <header class="cabecalho-projetos">
+          <span class="etiqueta-projetos">
+            <span class="ponto-etiqueta"></span>
+            MEU TRABALHO
+          </span>
+
+          <h2 class="titulo-projetos">
+            Projetos em <span>Destaque</span>
+          </h2>
+
+          <p class="descricao-projetos">
+            Ideias transformadas em experiências digitais.
+            Conheça alguns projetos que representam minha jornada
+            no desenvolvimento web.
+          </p>
+        </header>
+
+        <div class="grade-projetos">
+
+          <!-- Projeto 01 -->
+          <article class="cartao-projeto">
+            <div class="imagem-projeto visual-projeto-um">
+              <div class="janela-projeto">
+                <div class="barra-navegador">
+                  <div class="bolinhas-navegador">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="endereco-navegador">projeto-web.dev</div>
+                </div>
+
+                <div class="conteudo-visual">
+                  <span class="marca-visual">DC.</span>
+                  <div class="linhas-visuais">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="blocos-visuais">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+
+              <span class="numero-projeto">01</span>
+            </div>
+
+            <div class="informacoes-projeto">
+              <span class="categoria-projeto">DESENVOLVIMENTO WEB</span>
+
+              <h3>Projeto Web</h3>
+
+              <p>
+                Uma experiência digital moderna, responsiva
+                e desenvolvida para oferecer uma navegação intuitiva.
+              </p>
+
+              <ul class="tecnologias-projeto" aria-label="Tecnologias utilizadas">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+
+              <div class="acoes-projeto">
+                <a class="botao-projeto botao-projeto-principal" href="#" target="_blank" rel="noopener noreferrer">
+                  Ver projeto
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a class="botao-projeto botao-projeto-secundario" href="#" target="_blank" rel="noopener noreferrer">
+                  Código-fonte
+                  <span aria-hidden="true">⌘</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 02 -->
+          <article class="cartao-projeto">
+            <div class="imagem-projeto visual-projeto-dois">
+              <div class="janela-projeto">
+                <div class="barra-navegador">
+                  <div class="bolinhas-navegador">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="endereco-navegador">painel-dashboard.dev</div>
+                </div>
+
+                <div class="painel-visual">
+                  <span class="titulo-painel">Dashboard</span>
+
+                  <div class="indicadores-visuais">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <div class="grafico-visual">
+                    <i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                </div>
+              </div>
+
+              <span class="numero-projeto">02</span>
+            </div>
+
+            <div class="informacoes-projeto">
+              <span class="categoria-projeto">SISTEMAS E DASHBOARDS</span>
+
+              <h3>Painel Interativo</h3>
+
+              <p>
+                Uma interface organizada para apresentar informações,
+                indicadores e dados de maneira clara e eficiente.
+              </p>
+
+              <ul class="tecnologias-projeto" aria-label="Tecnologias utilizadas">
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>API</li>
+              </ul>
+
+              <div class="acoes-projeto">
+                <a class="botao-projeto botao-projeto-principal" href="#" target="_blank" rel="noopener noreferrer">
+                  Ver projeto
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a class="botao-projeto botao-projeto-secundario" href="#" target="_blank" rel="noopener noreferrer">
+                  Código-fonte
+                  <span aria-hidden="true">⌘</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 03 -->
+          <article class="cartao-projeto">
+            <div class="imagem-projeto visual-projeto-tres">
+              <div class="janela-projeto">
+                <div class="barra-navegador">
+                  <div class="bolinhas-navegador">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="endereco-navegador">automacao.dev</div>
+                </div>
+
+                <div class="automacao-visual">
+                  <div class="no-automacao">INÍCIO</div>
+                  <span class="conexao-automacao"></span>
+                  <div class="no-automacao no-automacao-destaque">PROCESSAR</div>
+                  <span class="conexao-automacao"></span>
+                  <div class="no-automacao">RESULTADO</div>
+                </div>
+              </div>
+
+              <span class="numero-projeto">03</span>
+            </div>
+
+            <div class="informacoes-projeto">
+              <span class="categoria-projeto">AUTOMAÇÃO E INTEGRAÇÕES</span>
+
+              <h3>Fluxo Inteligente</h3>
+
+              <p>
+                Uma solução para conectar serviços, automatizar tarefas
+                e simplificar processos por meio da tecnologia.
+              </p>
+
+              <ul class="tecnologias-projeto" aria-label="Tecnologias utilizadas">
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>APIs</li>
+              </ul>
+
+              <div class="acoes-projeto">
+                <a class="botao-projeto botao-projeto-principal" href="#" target="_blank" rel="noopener noreferrer">
+                  Ver projeto
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a class="botao-projeto botao-projeto-secundario" href="#" target="_blank" rel="noopener noreferrer">
+                  Código-fonte
+                  <span aria-hidden="true">⌘</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="rodape-projetos">
+          <p>Novas ideias, novos projetos e evolução constante.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5511977799209?text=Ol%C3%A1%21%20Vim%20pelo%20site%20DC%20Developer%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20cria%C3%A7%C3%A3o%20de%20sites%2C%20aplica%C3%A7%C3%B5es%20web%20e%20integra%C3%A7%C3%A3o%20de%20automa%C3%A7%C3%B5es%20inteligentes%20com%20IA"
+    class="botao-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato pelo WhatsApp">
+    <svg class="icone-whatsapp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path
+        d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z" />
+    </svg>
+    <span class="mensagem-whatsapp"> Fale comigo pelo Whatsapp 🟢 </span>
+  </a>
+</body>
+
 </html>

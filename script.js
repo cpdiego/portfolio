@@ -139,3 +139,48 @@ if ("IntersectionObserver" in window) {
 } else {
   mostrarElementosSobre();
 }
+
+
+/* ========================================
+   ANIMAÇÃO DOS PROJETOS AO ROLAR A PÁGINA
+======================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elementosAnimados = document.querySelectorAll(
+    '.cabecalho-projetos, .cartao-projeto, .rodape-projetos'
+  );
+
+  // Respeita a preferência de movimento reduzido
+  const movimentoReduzido = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  if (movimentoReduzido || !('IntersectionObserver' in window)) {
+    elementosAnimados.forEach((elemento) => {
+      elemento.classList.add('visivel');
+    });
+
+    return;
+  }
+
+  const observador = new IntersectionObserver(
+    (entradas, observadorAtual) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visivel');
+
+          // Anima apenas na primeira aparição
+          observadorAtual.unobserve(entrada.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  elementosAnimados.forEach((elemento) => {
+    observador.observe(elemento);
+  });
+});
