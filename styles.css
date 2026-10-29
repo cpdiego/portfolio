@@ -79,9 +79,11 @@ svg {
   padding: 110px var(--espacamento-lateral) 85px;
 
   background:
-    radial-gradient(ellipse at 78% 45%,
+    radial-gradient(
+      ellipse at 78% 45%,
       rgba(25, 82, 175, 0.12),
-      transparent 42%),
+      transparent 42%
+    ),
     var(--cor-fundo);
 }
 
@@ -125,7 +127,7 @@ svg {
 .cabecalho {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 49.3%;
   transform: translateX(-50%);
   z-index: 1000;
 
@@ -147,7 +149,7 @@ svg {
 }
 
 .cabecalho::before {
-  content: "";
+  content: '';
   position: fixed;
   top: 0;
   left: 50%;
@@ -166,10 +168,10 @@ svg {
 }
 
 .cabecalho::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0.7%;
   right: 0;
 
   /* Cria uma linha fina cirúrgica que fica por cima do desfoque */
@@ -593,10 +595,12 @@ svg {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(145deg,
-      rgba(39, 118, 255, 0.32),
-      rgba(10, 18, 37, 0.1) 60%,
-      rgba(130, 87, 255, 0.2));
+  background: linear-gradient(
+    145deg,
+    rgba(39, 118, 255, 0.32),
+    rgba(10, 18, 37, 0.1) 60%,
+    rgba(130, 87, 255, 0.2)
+  );
 }
 
 .foto-desenvolvedor {
@@ -1017,6 +1021,18 @@ svg {
    13. NOTEBOOKS E TELAS INTERMEDIÁRIAS
 ========================================== */
 
+/* Ajuste do cabeçalho para notebooks */
+@media (min-width: 769px) and (max-width: 1366px) {
+  .cabecalho {
+    padding-inline: 4.5%;
+  }
+
+  .cabecalho::after {
+    left: 5.3%;
+    right: 4.5%;
+  }
+}
+
 @media (max-width: 1100px) {
   :root {
     --espacamento-lateral: 5%;
@@ -1390,7 +1406,6 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-
 /* ==========================================
    SEÇÃO SOBRE — ESTILO PRINCIPAL
 ========================================== */
@@ -1407,14 +1422,14 @@ button:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(80px, 9vw, 125px) 24px;
+  padding: clamp(80px, 9vw, 125px) var(--espacamento-lateral);
   color: var(--sobre-texto);
   background: var(--sobre-fundo) !important;
 }
 
 /* Imagem de fundo limitada a 1300px */
 .secao-sobre::before {
-  content: "" !important;
+  content: '' !important;
   position: absolute !important;
   z-index: -2 !important;
 
@@ -1432,68 +1447,81 @@ button:focus-visible {
 
   background-image:
     /* Camada escura azul-marinho */
-    linear-gradient(90deg,
+    linear-gradient(
+      90deg,
       #070b14 0%,
       rgba(7, 11, 20, 0.99) 12%,
       rgba(7, 11, 20, 0.94) 30%,
       rgba(7, 11, 20, 0.78) 52%,
       rgba(7, 11, 20, 0.62) 75%,
-      rgba(7, 11, 20, 0.78) 100%),
-
+      rgba(7, 11, 20, 0.78) 100%
+    ),
     /* Escurece e suaviza o topo e a base */
-    linear-gradient(180deg,
-      #070b14 0%,
-      rgba(7, 11, 20, 0.78) 15%,
-      rgba(7, 11, 20, 0.18) 40%,
-      rgba(7, 11, 20, 0.18) 65%,
-      rgba(7, 11, 20, 0.78) 88%,
-      #070b14 100%),
+    linear-gradient(
+        180deg,
+        #070b14 0%,
+        rgba(7, 11, 20, 0.78) 15%,
+        rgba(7, 11, 20, 0.18) 40%,
+        rgba(7, 11, 20, 0.18) 65%,
+        rgba(7, 11, 20, 0.78) 88%,
+        #070b14 100%
+      ),
+    url('./assets/imagem-background.png');
 
-    url("./assets/imagem-background.png");
-
-  background-position: center, center, right center;
-  background-size: 100% 100%, 100% 100%, auto 100%;
+  background-position:
+    center,
+    center,
+    right center;
+  background-size:
+    100% 100%,
+    100% 100%,
+    auto 100%;
   background-repeat: no-repeat;
 
   /* Dissolve as bordas laterais */
-  -webkit-mask-image: linear-gradient(90deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.35) 7%,
-      #000 23%,
-      #000 76%,
-      rgba(0, 0, 0, 0.75) 88%,
-      transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 7%,
+    #000 23%,
+    #000 76%,
+    rgba(0, 0, 0, 0.75) 88%,
+    transparent 100%
+  );
 
-  mask-image: linear-gradient(90deg,
-      transparent 0%,
-      rgba(0, 0, 0, 0.35) 7%,
-      #000 23%,
-      #000 76%,
-      rgba(0, 0, 0, 0.75) 88%,
-      transparent 100%);
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 7%,
+    #000 23%,
+    #000 76%,
+    rgba(0, 0, 0, 0.75) 88%,
+    transparent 100%
+  );
 
   animation: sobre-revelar-fundo 1.4s ease both;
 }
 
-
 /* Iluminação azul e roxa */
 .secao-sobre::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   inset: 0;
   pointer-events: none;
 
   background:
-    radial-gradient(ellipse at 85% 35%,
+    radial-gradient(
+      ellipse at 85% 35%,
       rgba(37, 99, 235, 0.17),
-      transparent 43%),
-    radial-gradient(ellipse at 75% 80%,
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 75% 80%,
       rgba(124, 58, 237, 0.12),
-      transparent 38%),
-    linear-gradient(180deg,
-      rgba(7, 11, 20, 0.05),
-      rgba(7, 11, 20, 0.3));
+      transparent 38%
+    ),
+    linear-gradient(180deg, rgba(7, 11, 20, 0.05), rgba(7, 11, 20, 0.3));
 }
 
 .sobre-container {
@@ -1542,9 +1570,7 @@ button:focus-visible {
 .sobre-cabecalho h2 span {
   display: block;
   color: transparent;
-  background: linear-gradient(100deg,
-      var(--sobre-azul),
-      var(--sobre-roxo));
+  background: linear-gradient(100deg, var(--sobre-azul), var(--sobre-roxo));
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -1601,7 +1627,14 @@ button:focus-visible {
   color: var(--sobre-azul);
 }
 
-.sobre-texto>p {
+.sobre-texto h4 {
+  margin: 0 0 15px;
+  font-size: clamp(1.2rem, 1vw, 1.8rem);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.sobre-texto > p {
   margin: 0 0 18px;
   color: var(--sobre-texto-suave);
   font-size: 0.98rem;
@@ -1676,9 +1709,11 @@ button:focus-visible {
   padding: 14px 20px;
   border: 1px solid rgba(87, 164, 255, 0.5);
   border-radius: 10px;
-  background: linear-gradient(110deg,
-      rgba(37, 99, 235, 0.2),
-      rgba(124, 58, 237, 0.15));
+  background: linear-gradient(
+    110deg,
+    rgba(37, 99, 235, 0.2),
+    rgba(124, 58, 237, 0.15)
+  );
   color: var(--sobre-texto);
   font-size: 0.9rem;
   font-weight: 600;
@@ -1736,7 +1771,6 @@ button:focus-visible {
 }
 
 @keyframes sobre-pulsar {
-
   0%,
   100% {
     opacity: 1;
@@ -1768,12 +1802,12 @@ button:focus-visible {
 
   .secao-sobre::before {
     background-image:
-      linear-gradient(90deg,
-        rgba(7, 11, 20, 0.94),
-        rgba(7, 11, 20, 0.84)),
-      url("./assets/imagem-background.png");
+      linear-gradient(90deg, rgba(7, 11, 20, 0.94), rgba(7, 11, 20, 0.84)),
+      url('./assets/imagem-background.png');
 
-    background-position: center, 65% center;
+    background-position:
+      center,
+      65% center;
     background-size: cover, cover;
     background-repeat: no-repeat;
   }
@@ -1794,7 +1828,7 @@ button:focus-visible {
     font-size: 2rem;
   }
 
-  .sobre-texto>p {
+  .sobre-texto > p {
     font-size: 0.94rem;
   }
 
@@ -1824,7 +1858,6 @@ button:focus-visible {
    BOTÃO - WHATSAPP
 ========================================== */
 
-
 /* Botão flutuante do WhatsApp */
 .botao-whatsapp {
   position: fixed;
@@ -1841,13 +1874,9 @@ button:focus-visible {
   border-radius: 50%;
 
   color: #ffffff;
-  background: linear-gradient(145deg,
-      var(--cor-azul),
-      #1265e8);
+  background: linear-gradient(145deg, var(--cor-azul), #1265e8);
 
-  border: 1px solid color-mix(in srgb,
-      var(--cor-azul) 70%,
-      white);
+  border: 1px solid color-mix(in srgb, var(--cor-azul) 70%, white);
 
   box-shadow:
     0 0 12px color-mix(in srgb, var(--cor-azul) 65%, transparent),
